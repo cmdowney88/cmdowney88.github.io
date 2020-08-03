@@ -1,0 +1,136 @@
+[
+    {
+        "type": "education",
+        "title": "University of Washington",
+        "city": "Seattle",
+        "level": "PhD",
+        "field": "Computational Linguistics",
+        "gpa": 3.95,
+        "start_date": "September 2018",
+        "end_date": "present",
+        "advisors": ["Gina-Anne Levow"]
+    },
+    {
+        "type": "education",
+        "title": "Tulane University",
+        "city": "New Orleans",
+        "level": "BS",
+        "field": "Linguistics and Russian",
+        "gpa": 3.99,
+        "start_date": "August 2014",
+        "end_date": "May 2018",
+        "advisors": ["Charles Mignot", "Judith Maxwell"]
+    },
+    {
+        "type": "research_position",
+        "title": "University of Washington FLAS Fellowship",
+        "position": "Fellow",
+        "description": "Foreign Language and Area Studies funded fellowship to study Inuktitut",
+        "start_date": "September 2019",
+        "end_date": "June 2020",
+        "supervisors": ["Nadine Fabbi"]
+    },
+    {
+        "type": "research_position",
+        "title": "Low Resource Languages for Emergent Incidents (LORELEI)",
+        "position": "Research Assistant",
+        "description": "DARPA project for rapid machine translation of low-resource languages",
+        "start_date": "August 2019",
+        "end_date": "October 2019",
+        "supervisors": ["Gina-Anne Levow"]
+    },
+    {
+        "type": "research_position",
+        "title": "Newberry Research Library Summer Institute",
+        "position": "Fellow",
+        "description": "Research on digital methods for language revitalization as well as ethics in Indigenous linguistics",
+        "start_date": "July 2019",
+        "end_date": "August 2019",
+        "supervisors": ["Jenny Davis"]
+    },
+    {
+        "type": "employment",
+        "title": "University of Washington: Department of Linguistics",
+        "position": "Teaching/Research Assistant",
+        "start_date": "September 2018",
+        "end_date": "present",
+        "supervisors": ["Richard Wright"]
+    },
+    {
+        "type": "employment",
+        "title": "Apple: Siri Web Answers",
+        "position": "AI|ML Intern",
+        "start_date": "June 2020",
+        "end_date": "September 2020",
+        "supervisors": ["Chris DuBois"]
+    },
+    {
+        "type": "invited_talk",
+        "title": "Subword Segmentation for Morphologically Complex Languages",
+        "event": "UW NLP Retreat",
+        "location": "Lake Chelan, Washington",
+        "date": "September 28 2019"
+    },
+    {
+        "type": "invited_talk",
+        "title": "Dependency vs Phrase-Structure Trees",
+        "event": "UW Linguistics Syntax Roundtable",
+        "location": "Seattle, Washington",
+        "date": "October 4 2019"
+    },
+    {
+        "type": "invited_talk",
+        "title": "Archival Work and Language Revitalization at the NCAIS Summer Institute",
+        "event": "UW Linguistics Field Reports",
+        "location": "Seattle, Washington",
+        "date": "December 13 2019"
+    },
+    {
+        "type": "teaching",
+        "title": "LING 200: Introduction to Linguistic Thought",
+        "position": "Teaching Assistant",
+        "year": "2019",
+        "term": "Spring",
+        "supervisors": ["Richard Wright"]
+    },
+    {
+        "type": "teaching",
+        "title": "LING 200: Introduction to Linguistic Thought",
+        "position": "Teaching Assistant",
+        "year": "2018",
+        "term": "Fall",
+        "supervisors": ["Laura McGarrity"]
+    },
+    {
+        "type": "teaching",
+        "title": "LING 406: Introduction to Syntax",
+        "position": "Grader",
+        "year": "2018",
+        "term": "Fall",
+        "supervisors": ["Kirby Conrod"]
+    },
+    {
+        "type": "teaching",
+        "title": "ASL 305: Introduction to American Deaf Culture",
+        "position": "Grader",
+        "year": "2019",
+        "term": "Spring",
+        "supervisors": ["Lance Forshay"]
+    },
+    {
+        "type": "guest_lecture",
+        "title": "Computational Linguistics and Language Revitalization",
+        "date": "January 27 2020",
+        "course": "ENGL 4717 (NAIS Capstone Seminar)",
+        "school": "University of Colorado at Boulder",
+        "instructor": "Penelope Kelsey"
+    },
+    {
+        "type": "guest_lecture",
+        "title": "Computational Linguistics and Language Revitalization",
+        "date": "May 4 2020",
+        "course": "LING 234 (Langauge and Diversity)",
+        "school": "University of Washington",
+        "instructor": "Lorna Rozelle"
+    }
+]
