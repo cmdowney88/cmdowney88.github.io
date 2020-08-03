@@ -330,7 +330,7 @@ function createSection(items, secondaries, section_id) {
         item = items[x]
 
         title = document.createTextNode(item.title)
-        title_node = document.createElement("h4")
+        title_node = document.createElement("h5")
         //title_node.className = "cv_title"
         title_node.appendChild(title)
 
