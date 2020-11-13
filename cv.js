@@ -87,6 +87,14 @@ var cv = [
     },
     {
         "type": "teaching",
+        "title": "LING 566: Introduction to Syntax for Computational Linguistics",
+        "position": "Teaching Assistant",
+        "year": "2020",
+        "term": "Fall",
+        "supervisors": ["Emily Bender"]
+    },
+    {
+        "type": "teaching",
         "title": "LING 200: Introduction to Linguistic Thought",
         "position": "Teaching Assistant",
         "year": "2019",
@@ -171,6 +179,10 @@ var people = [
     {
         "name": "Chris DuBois",
         "site": "http://chrisdubois.org"
+    },
+    {
+        "name": "Emily M. Bender",
+        "site": "https://linguistics.washington.edu/people/emily-m-bender"
     }
 ]
 
