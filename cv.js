@@ -91,7 +91,7 @@ var cv = [
         "position": "Teaching Assistant",
         "year": "2020",
         "term": "Fall",
-        "supervisors": ["Emily Bender"]
+        "supervisors": ["Emily M. Bender"]
     },
     {
         "type": "teaching",
