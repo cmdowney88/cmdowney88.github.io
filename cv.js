@@ -5,7 +5,7 @@ var cv = [
         "city": "Seattle",
         "level": "PhD",
         "field": "Computational Linguistics",
-        "gpa": 3.95,
+        "gpa": 3.97,
         "start_date": "September 2018",
         "end_date": "present",
         "advisors": ["Gina-Anne Levow"]
@@ -84,6 +84,14 @@ var cv = [
         "event": "UW Linguistics Field Reports",
         "location": "Seattle, Washington",
         "date": "December 13 2019"
+    },
+    {
+        "type": "teaching",
+        "title": "LING 575: Deep Learning for Natural Language Processing",
+        "position": "Teaching Assistant",
+        "year": "2021",
+        "term": "Spring",
+        "supervisors": ["Shane Steinert-Threlkeld"]
     },
     {
         "type": "teaching",
@@ -183,6 +191,10 @@ var people = [
     {
         "name": "Emily M. Bender",
         "site": "https://linguistics.washington.edu/people/emily-m-bender"
+    },
+    {
+        "name": "Shane Steinert-Threlkeld",
+        "site": "https://linguistics.washington.edu/people/shane-steinert-threlkeld"
     }
 ]
 
