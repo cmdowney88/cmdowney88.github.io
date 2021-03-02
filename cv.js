@@ -149,6 +149,10 @@ var cv = [
         "school": "University of Washington",
         "instructor": "Lorna Rozelle"
     }
+    {
+        "type": "service",
+        "title": "ACL Paper-Reviewer"
+    }
 ]
 
 var people = [
@@ -398,6 +402,7 @@ research_positions = []
 publications = []
 teaching = []
 employment = []
+service = []
 talks = []
 lectures = []
 
@@ -418,6 +423,9 @@ for (i=0; i<cv.length; i++) {
             break
         case "employment":
             employment.push(item)
+            break
+        case "service":
+            service.push(item)
             break
         case "invited_talk":
             talks.push(item)
@@ -468,3 +476,10 @@ for (i=0; i<lectures.length; i++) {
     lectures_secondaries.push(lectureSecondary(lectures[i]))
 }
 createSection(lectures, lectures_secondaries, "lectures_ul")
+
+service.sort(compareDates)
+service_secondaries = []
+for (i=0; i<service.length; i++) {
+    service_secondaries.push(positionSecondary(service[i]))
+}
+createSection(service, service_secondaries, "service_ul")
