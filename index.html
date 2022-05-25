@@ -67,12 +67,14 @@
                         <div class="row my-5"><h1 class="mx-auto font-weight-bold section-border">About Me</h1></div>
                         <div class="row">
                             <div class="col-md-9 mx-auto">
-                                <p>I am currently a PhD student in Computational Linguistics with the University of Washington <a href="https://linguistics.washington.edu" target="_blank" rel="noopener noreferrer">Department of Linguistics</a>, under the advisement of Dr. <a href="https://linguistics.washington.edu/people/gina-anne-levow" target="_blank" rel="noopener noreferrer">Gina-Anne Levow</a>. I also belong to the <a href="https://clmbr.shane.st" target="_blank" rel="noopener noreferrer">CLMBR</a> lab group within UW NLP, headed by <a href="https://www.shane.st" target="_blank" rel="noopener noreferrer">Shane Steinert-Threlkeld</a>. Before coming to UW, I earned a B.S. in Linguistics and Russian at Tulane University, where I also completed extensive coursework in Computer Science, including algorithmic analysis, machine learning, and computational linguistics.</p>
-                                <p>In my research, I focus on Natural Language Processing outside the bounds of English-only supervised tasks. I am especially interested in NLP for cross-lingual and low-resource settings, and applying NLP to the revitalization of Indigenous and otherwise endangered languages. Specific research projects of mine have spanned:</p>
+                                <p>I am currently a PhD student in Computational Linguistics with the University of Washington <a href="https://linguistics.washington.edu" target="_blank" rel="noopener noreferrer">Department of Linguistics</a>, under the advisement of Dr. <a href="https://linguistics.washington.edu/people/gina-anne-levow" target="_blank" rel="noopener noreferrer">Gina-Anne Levow</a> and <a href="https://www.shane.st" target="_blank" rel="noopener noreferrer">Shane Steinert-Threlkeld</a>. I also belong to Dr. Steinert-Threlkeld's <a href="https://clmbr.shane.st/", target="_blank" rel="noopener noreferrer">CLMBR</a> lab. Before coming to UW, I earned a B.S. in Linguistics and Russian at Tulane University, where I also completed the Computer Science program coursework, including algorithmic analysis, machine learning, and computational linguistics.</p>
+                                <p>In my research, I focus on developing methodologies to improve the efficacy of Natural Language Processing in low-resource languages and settings. To this end, I specialize in <em>unsupervised/semisupervised machine learning</em>, <em>multilingual language modeling</em>, and <em>cross-lingual transfer</em>. Specific tasks to which I have applied these techniques include (unsupervised) Machine Translation, unsupervised morphological segmentation, and cross-lingual Natural Language Inference (NLI). Recent projects of mine include:</p>
                                 <ul>
-                                    <li>Improving Machine Translation for low-resource and unsupervised settings</li>
-                                    <li>Developing unsupervised methods segmenting raw text into linguistic-like units</li>
-                                    <li>Improving the zero-shot transferability of modern crosslingual models to low-resource languages</li>
+                                    <li>Improving upon unsupervised translation baselines using Emergent Communication as a training signal</li>
+                                    <li>Conducting zero- and few-shot crosslingual transfer of a morpheme-segmentation model into extremely low-resource languages</li>
+                                    <li>Developing models for completely unsupervised morpheme segmentation</li>
+                                    <li>Investigating language-wise representation alignment in crosslingual language models</li>
+                                    <li>Investigating the effect of various segmentation schemes as input to low-resource Machine Translation</li>
                                 </ul>
                                 <p>I aim for the research I conduct to not just advance linguistic science, but also aid in the concrete task of language revitalization among groups who have experienced attrition of their native language due to colonialism and related influences. It is my hope that NLP can be a tool to help Indigenous communities reclaim their languages by making technology-based language-learning easy and accessible for both students and teachers.</p>
                                 <p>For more specific information on my work, please see the CV information and links on this page.</p>
@@ -89,11 +91,11 @@
                                 <ul>
                                     <li>
                                         <div id="itemTitle"><h5>Ph.D., Computational Linguistics</h5><em class="float-right">September 2018 - Present</em></div>
-                                        <p><em>University of Washington</em>; Advised by <a href="https://linguistics.washington.edu/people/gina-anne-levow" target="_blank" rel="noopener noreferrer">Gina-Anne Levow</a></p>
+                                        <p>University of Washington; Advised by <a href="https://linguistics.washington.edu/people/gina-anne-levow" target="_blank" rel="noopener noreferrer">Gina-Anne Levow</a></p>
                                     </li>
                                     <li>
                                         <div id="itemTitle"><h5>B.S. Linguistics, Russian</h5><em class="float-right">August 2014 - May 2018</em></div>
-                                        <p><em>Tulane University</em>; Advised by <a href="https://liberalarts.tulane.edu/programs/linguistics/faculty/charles-mignot" target="_blank" rel="noopener noreferrer">Charles Mignot</a> and <a href="https://liberalarts.tulane.edu/programs/linguistics/faculty/judith-maxwell" target="_blank" rel="noopener noreferrer">Judith Maxwell</a></p>
+                                        <p>Tulane University; Advised by <a href="https://liberalarts.tulane.edu/programs/linguistics/faculty/charles-mignot" target="_blank" rel="noopener noreferrer">Charles Mignot</a> and <a href="https://liberalarts.tulane.edu/programs/linguistics/faculty/judith-maxwell" target="_blank" rel="noopener noreferrer">Judith Maxwell</a></p>
                                     </li>
                                 </ul>
                             </div>
@@ -113,7 +115,7 @@
                                     </li>
                                     <li>
                                         <div id="itemTitle"><h5>Siri Web Answers</h5><em class="float-right">June - September 2020</em></div>
-                                        <p><em>Apple.</em> AI|ML Intern; Supervised by <a href="http://chrisdubois.org" target="_blank" rel="noopener noreferrer">Chris DuBois</a></p>
+                                        <p>Apple; AI|ML Intern; Supervised by <a href="http://chrisdubois.org" target="_blank" rel="noopener noreferrer">Chris DuBois</a></p>
                                     </li>
                                 </ul>
                             </div>
@@ -157,24 +159,38 @@
                             <div class="col-md-9 mx-auto">
                                 <ul>
                                     <li>
+                                        <div id="itemTitle"><h5>A Masked Segmental Language Model for Natural Language Segmentation</h5><em class="float-right">June 2022</em></div>
+                                        <p class="venue"><em>Proceedings of the 19th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology, NAACL</em></p>
+                                        <p class="authors">C.M. Downey, Fei Xia, Gina-Anne Levow, and Shane Steinert-Threlkeld</p>
+                                        <a href="https://arxiv.org/abs/2104.07829" class="badge badge-danger" target="_blank" rel="noopener noreferrer">Arxiv</a>
+                                        <a href="https://github.com/cmdowney88/SegmentalLMs" class="badge badge-dark" target="_blank" rel="noopener noreferrer">Code</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9 mx-auto">
+                                <ul>
+                                    <li>
                                         <div id="itemTitle"><h5>Multilingual unsupervised sequence segmentation transfers to extremely low-resource languages</h5><em class="float-right">May 2022</em></div>
                                         <p class="venue"><em>Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics</em></p>
                                         <p class="authors">C.M. Downey, Shannon Drizin, Levon Haroutunian, Shivin Thukral</p>
+                                        <a href="https://aclanthology.org/2022.acl-long.366/" class="badge badge-primary" target="_blank" rel="noopener noreferrer">ACL Anthology</a>
                                         <a href="https://arxiv.org/abs/2110.08415" class="badge badge-danger" target="_blank" rel="noopener noreferrer">Arxiv</a>
                                         <a href="https://github.com/cmdowney88/XLSLM" class="badge badge-dark" target="_blank" rel="noopener noreferrer">Code</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="row my-5"><h4 class="mx-auto section-border">2021</h4></div>
                         <div class="row">
                             <div class="col-md-9 mx-auto">
                                 <ul>
                                     <li>
-                                        <div id="itemTitle"><h5>A Masked Segmental Language Model for Natural Language Segmentation</h5><em class="float-right">April 2021</em></div>
-                                        <p class="authors">C.M. Downey, Fei Xia, Gina-Anne Levow, and Shane Steinert-Threlkeld</p>
-                                        <a href="https://arxiv.org/abs/2104.07829" class="badge badge-danger" target="_blank" rel="noopener noreferrer">Arxiv</a>
-                                        <a href="https://github.com/cmdowney88/SegmentalLMs" class="badge badge-dark" target="_blank" rel="noopener noreferrer">Code</a>
+                                        <div id="itemTitle"><h5>Emergent Communication Fine-tuning (EC-FT) for Pretrained Language Models</h5><em class="float-right">April 2022</em></div>
+                                        <p class="venue"><em>Proceedings of the 5th Annual Workshop on Emergent Communication, ICLR</em></p>
+                                        <p class="authors">Shane Steinert-Threlkeld, Leo Z. Liu, Xuhui Zhou, C.M. Downey</p>
+                                        <a href="https://openreview.net/forum?id=SUqrM7WR7W5" class="badge badge-primary" target="_blank" rel="noopener noreferrer">OpenReview</a>
+                                        <a href="https://github.com/CLMBRs/communication-translation" class="badge badge-dark" target="_blank" rel="noopener noreferrer">Code</a>
                                     </li>
                                 </ul>
                             </div>
@@ -188,6 +204,14 @@
                         <div class="row">
                             <div class="col-md-9 mx-auto">
                                 <ul>
+                                    <li>
+                                        <div id="itemTitle"><h5>Multilingual unsupervised sequence segmentation transfers to extremely low-resource languages</h5><em class="float-right">May 5 2022</em></div>
+                                        <p>UW Electrical Engineering TIAL Lab (PI: Mari Ostendorf); Seattle, Washington</p>
+                                    </li>
+                                    <li>
+                                        <div id="itemTitle"><h5>Collaborative Coding Best Practices</h5><em class="float-right">October 22 2021</em></div>
+                                        <p>UW Computational Linguistics Treehouse; Seattle, Washington</p>
+                                    </li>
                                     <li>
                                         <div id="itemTitle"><h5>A Masked Segmental Language Model for Unsupervised Sequence Segmentation</h5><em class="float-right">September 20 2021</em></div>
                                         <p>UW NLP Retreat; Seattle, Washington</p>
@@ -263,6 +287,10 @@
                         <div class="row">
                             <div class="col-md-9 mx-auto">
                                 <ul>
+                                    <li>
+                                        <div id="itemTitle"><h5>Cross-lingual Language Modeling</h5><em class="float-right">May 18 2022</em></div>
+                                        <p>as part of LING 575k: Deep Learning for NLP; University of Washington; Instructed by <a href="https://www.shane.st" target="_blank" rel="noopener noreferrer">Shane Steinert-Threlkeld</a></p>
+                                    </li>
                                     <li>
                                         <div id="itemTitle"><h5>Cross-lingual Language Modeling</h5><em class="float-right">May 26 2021</em></div>
                                         <p>as part of LING 575k: Deep Learning for NLP; University of Washington; Instructed by <a href="https://www.shane.st" target="_blank" rel="noopener noreferrer">Shane Steinert-Threlkeld</a></p>
