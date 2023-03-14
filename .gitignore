@@ -1,1 +1,9 @@
 .DS_Store
+
+# LaTeX
+*.log
+*.out
+*.aux
+*latexmk
+*.fls
+*.synctex.gz
