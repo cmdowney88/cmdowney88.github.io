@@ -4,8 +4,8 @@
 
 \begin{document}
 
-\title{LING 575K HW1}
-\date{\vspace{-0.2in}Due 11PM on Apr 7, 2022}
+\title{Ling 575j hw1}
+\date{\vspace{-0.2in}Due 11pm on April 6, 2023}
 \maketitle
 
 
@@ -21,14 +21,14 @@ The first two lines of \texttt{run\_hw1.sh} show how to now activate the environ
 
 \section{Implementing a Vocabulary Class [30 pts]}
 
-A \texttt{Vocabulary} object provides the basic interface between raw text (strings) and integer IDs, which the models we will build require.  In \texttt{/dropbox/21-22/575k/hw1} you will find:
+A \texttt{Vocabulary} object provides the basic interface between raw text (strings) and integer IDs, which the models we will build require.  In \texttt{/dropbox/22-23/575j/hw1} you will find:
 \begin{itemize}
   \item vocabulary.py: main file to edit
   \item main.py: running script, also to edit
   \item run\_hw1.sh: main shell script, add your commands here
   \item toy-vocab.txt: output of running 
   
-    \texttt{python main.py --text\_file /dropbox/21-22/575k/data/toy-reviews.txt --output\_file toy-vocab.txt}
+    \texttt{python main.py --text\_file /dropbox/22-23/575j/data/toy-reviews.txt \\--output\_file toy-vocab.txt}
 \end{itemize}
 All places for you to edit are marked by `\# TODO:' comments.
 
@@ -52,8 +52,8 @@ All places for you to edit are marked by `\# TODO:' comments.
 \vspace{2em}
 \noindent {\bf Q5: build two vocabularies}  Finally, execute the following two commands (and add them to \texttt{run\_hw1.sh}):
 \begin{itemize}
-  \item \texttt{python main.py --text\_file /dropbox/21-22/575k/data/sst/train-reviews.txt --output\_file train\_vocab\_base.txt}
-  \item \texttt{python main.py --text\_file /dropbox/21-22/575k/data/sst/train-reviews.txt --output\_file train\_vocab\_freq5.txt --min\_freq 5}
+  \item \texttt{python main.py --text\_file /dropbox/22-23/575j/data/sst/train-reviews.txt \\--output\_file train\_vocab\_base.txt}
+  \item \texttt{python main.py --text\_file /dropbox/22-23/575j/data/sst/train-reviews.txt \\--output\_file train\_vocab\_freq5.txt --min\_freq 5}
 \end{itemize}
 These will produce two output files that should also be included in your tar.gz (see below).
 
@@ -108,11 +108,4 @@ In your submission, include the following:
   \end{itemize}
 \end{itemize}
 
-
-
-
-
 \end{document}
-
-
-
