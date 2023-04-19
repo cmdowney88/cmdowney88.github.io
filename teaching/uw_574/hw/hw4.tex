@@ -5,8 +5,8 @@
 
 \begin{document}
 
-\title{LING 575K HW4}
-\date{\vspace{-0.2in}Due 11PM on Apr 28, 2022}
+\title{Ling 575j hw4}
+\date{\vspace{-0.2in}Due 11pm on Apr 27, 2023}
 \maketitle
 
 
@@ -24,7 +24,6 @@
 \noindent {\bf Q1: Implement bag of words representation }  The input to a DAN model is a \emph{bag of words}: a vector (a batch of such vectors, really) with counts of the vocabulary items at the corresponding indices (see slide 14 in lecture 6).   \hfill [5 pts]
 
 \noindent In \texttt{data.py}, implement the building of this representation in \texttt{SSTClassificationDataset.example\_to\_tensors}.
-
 
 \vspace{2em}
 \noindent {\bf Q2: Implement DeepAveragingNetwork.forward}  In \texttt{model.py}, you will find the skeleton of a Deep Averaging Network (with two hidden layers).  In particular, we have implemented the initialization of the Module.  You need to implement the forward method, which takes two inputs: a batch of bag-of-words representations and a list of lengths, and then outputs scores for each class label for each row in the batch.  See the doc-string for more information.  Note: the edugrad repository (and the slides for HW4) has an example of implementing forward for an MLP that you can use for inspiration. \hfill [15 pts]
@@ -60,8 +59,8 @@ In \texttt{run.py}, you will find a basic training loop for building a DAN and t
   \item Embedding dimension: 50
   \item Batch size: 32
   \item Number of epochs: 6
-  \item Word dropout: 0.0 [i.e. no word dropout is applied]
-  \item $L_2$ regularization: 0.0 [i.e. no regularization is applied]
+  \item Word dropout: 0.0 (i.e. no word dropout is applied)
+  \item $L_2$ regularization: 0.0 (i.e. no regularization is applied)
 \end{itemize}
 Each run will print to stdout (and, therefore, the output file you specify in your condor job script) the training and dev set loss for each epoch, and then the final model's accuracy on the dev set.
 
@@ -99,7 +98,7 @@ Run the main training loop by calling \texttt{run.py}, but with the $L_2$ parame
 
 \section{Testing your code}
 
-In the dropbox folder for this assignment, you will find a file \texttt{test\_all.py} with a few very simple unit tests for the methods that you need to implement.  You can verify that your code passes the tests by running \texttt{pytest} from your code's directory, with the course's conda environment activated.
+In the dropbox folder for this assignment, you will find a file \texttt{test\_all.py} with a few very simple unit tests for the methods that you need to implement. You can verify that your code passes the tests by running \texttt{pytest} from your code's directory, with the course's conda environment activated.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
