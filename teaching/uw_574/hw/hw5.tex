@@ -5,8 +5,8 @@
 
 \begin{document}
 
-\title{LING 575K HW5}
-\date{\vspace{-0.2in}Due 11PM on May 5, 2022}
+\title{Ling 575j hw5}
+\date{\vspace{-0.2in}Due 11pm on May 4, 2023}
 \maketitle
 
 
@@ -16,12 +16,12 @@
   \item Implement components of data processing and text generation
   \item Implement key pieces of the model architecture
 \end{itemize}
-All files referenced herein may be found in \texttt{/dropbox/21-22/575k/hw5/} on patas.
+All files referenced herein may be found in \texttt{/dropbox/22-23/575j/hw5/} on patas.
 
 
 \section{Understanding the Feed-Forward Language Model [20 pts]}
 
-\noindent {\bf Q1: Architecture}  You can find a description of the model in the second half of the slides from lecture \#6. \hfill [12 pts]
+\noindent {\bf Q1: Architecture}  You can find a description of the model in the second half of the slides from lecture \#7. \hfill [12 pts]
 \begin{itemize}
   \item How many parameters are there?  Please write your answer in terms of the following quantities: $d_e$, the token embedding dimension; $|V|$, the size of the vocabulary; $d_h$: the dimension of the hidden layer; $n$: the $n$-gram size, i.e.\ how many previous tokens are used as input to the model.  [Note: you may assume that there are no ``direct connections'' between the embeddings and the final layer.]
   \item A traditional $n$-gram language model estimates probabilities $p(w_t | w_{t-1} , \dots , w_{t-n})$ using counts from a corpus.  How does the feed-forward language model compute this probability?  Answer with a sentence or two describing the overall computation.
