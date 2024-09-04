@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[margin=0.75in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\begin{document}
+
+\title{Ling 282/482 hw1}
+\date{\vspace{-0.2in}Due 11pm on September 11, 2024}
+\maketitle
+
+\section*{Submission Instructions}
+We are providing this homework both as a PDF and as a LaTeX source file. You can feel free to fill out this homework however you wish, but your submission must be uploaded as \textbf{either a *.txt or *.pdf file} to Blackboard. If you are comfortable with LaTeX, it may be neatest to start with the .tex file we provide, fill in your answers using LaTeX, and submit the pdf that you generate from the LaTeX source. Otherwise, you can format your answers however you wish, as long as they are legible, in the correct file format, and it is always clear which question is being answered.
+
+\section{Calculus: Derivatives and Gradients [28 pts]}
+
+This section is designed to practice the Calculus pre-requisites that we briefly reviewed in class. You don't need to have derivative rules memorized, but you should be comfortable computing derivatives and partial derivatives given access to a list of the rules. There are many good ``cheat sheets'' online, including this one from UC Davis: \url{https://www.math.ucdavis.edu/~kouba/Math17BHWDIRECTORY/Derivatives.pdf}.
+
+\vspace{2em}
+\noindent {\bf Q1: Basic Derivatives} [8pts; 1pt each] For each of the following functions $f(x)$, provide the derivative $f'(x)$\footnote{For functions with a single input variable $x$, $f'(x)$ is shorthand for $\frac{df}{dx}$}.
+
+\begin{enumerate}[label=\alph*.]
+    \setlength\itemsep{1em}
+    \item $3x^2$
+    \item $8x^3 + 3x^2 + 5$
+    \item $3x^{-2}$
+    \item $8e^x$
+    \item $13e^x - 3x^{-2}$
+    \item $5e^x \times 3x^2$
+    \item $\frac{ln(x)}{5}$
+    \item $\frac{ln(x)}{3x^2}$
+\end{enumerate}
+
+\newpage
+\noindent {\bf Q2: The Chain Rule of Calculus\footnote{There is another Chain Rule that we will use in this class: the ``Chain Rule of Probability''. You'll often see either of these simply referred to as ``The Chain Rule'', but know that they're completely different rules!}} [8pts]
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{ccccc}
+    \toprule
+    $x$ & $f(x)$ & $g(x)$ & $f'(x)$ & $g'(x)$ \\
+    \midrule
+    -2 & -8 & 2 & 4 & 2 \\
+    2 & 0 & -5 & -6 & -2 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:chain_rule}
+\end{table}
+
+\begin{enumerate}[label=\alph*.]
+  \setlength\itemsep{2em}
+  \item The table above lists the values of functions $f$ and $g$, and their derivatives $f'$ and $g'$, for the input values -2 and 2. Evaluate $\frac{d}{dx}f(g(x))$ for $x=-2$. [2pts]
+  \item Provide the derivative ($\frac{d}{dx}$) for each of the following functions. Make sure to show your work. [6pts; 2pts each]
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item $(8x^3 + 3x^2 +5)^4$
+    \item $e^{x^2}$
+    \item $ln(e^{4x})$
+  \end{itemize}
+\end{enumerate}
+
+\vspace{2em}
+\noindent {\bf Q3: Gradients} [8pts; 2pts each] Let $f(x,y) = -2x^3 + 4x^2y - 2y^3 - x$. Show your work for each of the following questions.
+\begin{enumerate}[label=\alph*.]
+  \setlength\itemsep{2em}
+  \item What is $\frac{df}{dx}$?
+  \item What is $\frac{df}{dy}$?
+  \item What is the gradient $\nabla f(x,y)$?
+  \item What is the value of the gradient $\nabla f(x,y)$ at the point (3, -2)?
+\end{enumerate}
+
+\vspace{2em}
+\noindent {\bf Q4: Loss and Gradient Descent} [4pts] In your own words, what is ``loss'' in machine learning? How does it tie in to gradients and the gradient descent algorithm? Explain in 2-3 sentences.
+
+\section{Vectors, Matrices, and Linear Transformations [24 pts]}
+
+\vspace{2em}
+\noindent {\bf Q1: Vector Independence and Span} [8pts]
+\begin{enumerate}[label=\alph*.]
+  \setlength\itemsep{2em}
+  \item Consider the vectors $a, b, d$
+  \[
+    a = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}
+    b = \begin{bmatrix}4 \\ 5 \\ 6\end{bmatrix}
+    c = \begin{bmatrix}7 \\ 5 \\ 3\end{bmatrix}
+  \]
+  \begin{itemize}
+    \setlength\itemsep{2em}
+    \item Is there a set of constants ${c_1, c_2, c_3}$ that make $c_1a + c_2b + c_3d = \mathbf{0}$? Provide them if so. [1pt]
+    \item What does your answer to the previous question say about this particular set of vectors? [1pt]
+    \item If the vectors $a, b, d$ are arranged into matrix $A$, what is the rank of matrix $A$? [1pt]
+    \item What can you say about the column space of matrix $A$? [1pt]
+  \end{itemize}
+
+  \item Consider the vectors $e, f, g$
+  \[
+    e = \begin{bmatrix}2 \\ 3 \\ 5\end{bmatrix}
+    f = \begin{bmatrix}-2 \\ 3 \\ 0\end{bmatrix}
+    g = \begin{bmatrix}-2 \\ 3 \\ -5\end{bmatrix}
+  \]
+  \begin{itemize}
+    \setlength\itemsep{2em}
+    \item Is there a set of constants ${c_1, c_2, c_3}$ that make $c_1e + c_2f + c_3g = \mathbf{0}$? Provide them if so. [1pt]
+    \item What does your answer to the previous question say about this particular set of vectors? [1pt]
+    \item If the vectors $e, f, g$ are arranged into matrix $B$, what is the rank of matrix $B$? [1pt]
+    \item What can you say about the column space of matrix $B$? [1pt]
+  \end{itemize}
+\end{enumerate}
+
+\vspace{2em}
+\noindent {\bf Q2: Matrix Multiplication} [8pts]
+\[
+  A = \begin{bmatrix}
+    2 & -2 & -2 \\
+    3 & 3 & 3 \\
+    5 & 0 & -5
+  \end{bmatrix}
+  x = \begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}
+\]
+
+\begin{enumerate}[label=\alph*.]
+  \setlength\itemsep{2em}
+  \item What is the result of the matrix-vector multiplication $Ax = b$? (Your answer should be $b$). Show your basic approach. [2pts]
+  \item In the lecture we described two ways of viewing matrix(-vector) multiplication: the first is the more ``traditional'' way, defined mostly in terms of dot products; the second involved thinking of linear combinations of columns. Briefly describe each in your own words (about one sentence each). Do you find one way more understandable or intuitive than the other? Feel free to answer honestly, there is no ``right answer''. [6pts]
+\end{enumerate}
+
+\vspace{2em}
+\noindent {\bf Q3: NumPy Vector Operations} [8pts]
+NumPy is a Python package for doing computations using vectors. Look up the online documentation and provide the Python commands/expressions for each of the following:
+\begin{enumerate}[label=\alph*.]
+  \setlength\itemsep{1em}
+  \item Form vector $x$ from Section 2 Q2. [1pt]
+  \item Form matrix $A$ from Section 2 Q2. [1pt]
+  \item Perform the matrix multiplication from Section 2 Q2. [1pt]
+  \item Get the shape of matrix $A$. [1pt]
+  \item Get the rank of matrix $A$. [1pt]
+  \item Get the transpose of matrix $A$. [1pt]
+  \item Take three vector variables \texttt{u, v, w} and form them into a matrix. (Assume \texttt{u, v,} and \texttt{w} are \textbf{column vectors}.) [2pts]
+\end{enumerate}
+
+\end{document}
