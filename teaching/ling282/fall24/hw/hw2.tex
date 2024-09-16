@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[margin=0.75in]{geometry}
+
+\begin{document}
+
+\title{Ling 282/482 hw2}
+\date{\vspace{-0.2in}Due 11PM on September 23, 2024}
+\maketitle
+
+
+In this assignment, you will answer some written questions about and then implement word2vec; in particular, the method \emph{skip-gram with negative sampling (SGNS)}.  By doing so you will:
+\begin{itemize}
+  \item Count parameters
+  \item Take derivatives of a loss
+  \item Translate mathematics into implemented code
+  \item Train your own set of word vectors and briefly analyze them
+\end{itemize}
+I \textbf{strongly recommend} doing this assignment in order.  Your answers in the written portion will make your implementation much easier, especially for the gradient computations.
+
+\section*{Submission Instructions}
+This assignment contains both written and programming portions. The answers to written questions must be submitted in a *.txt or *.pdf file to Blackboard. You will receive an invitation link to complete the programming portion via Github Classroom. This will open a Github repository with starter code and missing portions for you to complete. When you are finished with implementation, simply commit and push your changes to the online repository that was created for you. Unless you request otherwise, I will grade your work \textbf{as of the most recent commit} in your repository, subject to any applicable late penalties.
+
+\section*{Github Classroom \& Codespaces}
+Github Classroom and Codespaces were introduced during class, but feel free to reach out to me with any questions! Briefly, when you click ``accept assignment'', it will create the repository (including starter code) in which you will complete the assignment. You can open this repository in Github Codespaces --- a virtual IDE in which you can edit and run your code. You are also free to clone the repository to your local machine and work on the assignment there, but your code \textbf{must run} and \textbf{will be graded} in the Codespace environment. An Anaconda Python environment is set up for you within Codespaces, and should be activated with \texttt{conda activate ling482} before running code.
+
+\section{Understanding Word2Vec [30 pts]}
+
+\noindent {\bf Q1: Parameters [2 pts]}  How many parameters are there in the SGNS model?  Write your answer in terms of $V$ (the vocabulary) and $d_e$, the embedding dimension.  (Hint: one parameter is \emph{a single real number}.)
+
+\vspace{2em}
+\noindent {\bf Q2: Sigmoid [8 pts]}  Sigmoid is the logistic curve $\sigma(x) = \frac{1}{1+e^{-x}}$.
+\begin{itemize}
+  \item What is the range of $\sigma(x)$? [2 pts]
+  \item How is it used in the SGNS model? [2 pts]
+  \item Compute $\frac{d\sigma}{dx}$; show your work.  (Hint: write your final answer in terms of $\sigma(x)$.) [4pts]
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q3: Loss function's gradients [20 pts]}  In the slides for lecture 3, we saw that the total loss for one positive example and $k$ negative examples is given by:
+$$ L_{CE} = -\log P(1 | w, c_+) - \sum_{i=1}^k \log P(0 | w, c_{-i})$$
+In what follows, where $x$ is a vector and $f$ a function of $x$ and possibly more variables, we will define $\nabla_x f := \langle \frac{\partial f}{\partial x_1} , \frac{\partial f}{\partial x_2}, \dots , \frac{\partial f}{\partial x_n} \rangle$.
+\begin{itemize}
+  \item Rewrite this loss in terms of the parameter matrices $E$ and $C$ (i.e. replace the $P(\cdot)$s with the definition of the model). [2 pts]
+
+        Use $w$ as the integer index of the target word, $c_+$ as the integer index of the positive context word, and $c_{-i}$ as the integer index of the $i$th negative sampled context word.
+  \item Using the chain rule, compute $\frac{d}{dx} -\log\sigma(x)$.  (Hint: first, show that $\sigma(x) = \frac{e^x}{e^x+1}$.  Note: $\log$ here is the natural logarithm, i.e. logarithm with base $e$.) [4 pts]
+  \item Show that $\nabla_x x \cdot y = y$ (where $x \cdot y$ is the dot product of two vectors). [2 pts]
+  \item Compute (and show your work) $\nabla_{C_{c_+}} L_{CE}$. [4 pts]
+  \item Compute (and show your work) $\nabla_{C_{c_{-i}}} L_{CE}$. [4 pts]
+  \item Compute (and show your work) $\nabla_{E_w} L_{CE}$. [4 pts]
+\end{itemize}
+
+\section{Implementing Word2Vec [36 pts]}
+
+Before getting started, a few notes on the implementation:
+\begin{itemize}
+  \item Always start with small data!  To test various components of the pipeline, you can use the toy files in the \texttt{data} folder.
+  \item All files referenced here are available in your starter code.
+  \item The main training loop is at the bottom of \texttt{word2vec.py}.  You do not have to touch this, but can read it to see how the various components you implement are being used.
+  \item \texttt{word2vec.py} takes a variety of arguments, which are specified in \texttt{util.py}. If you do not specify these arguments, the default values will be used.
+  \item Remember to run \texttt{conda activate ling482} before running any Python code!
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q1: Data generation [12 pts]} In \texttt{data.py}
+\begin{itemize}
+  \item Implement \texttt{get\_positive\_samples}, which generates positive examples from a list of tokens. [8 pts]
+  \item Implement \texttt{negative\_samples}, which samples negative context words.  (Hint: \texttt{random.choices} is your friend, and pay attention to how \texttt{negatives\_from\_positive} works.) [4 pts]
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q2: Model computation [8 pts]} In \texttt{word2vec.py}
+\begin{itemize}
+  \item Implement \texttt{SGNS.forward}.  This represents one ``forward pass'' of the skip-gram with negative sampling model, i.e. this computes $P(1 | w, c)$.  Note: use \texttt{self.embeddings} and \texttt{self.context\_embeddings}, which are defined in \texttt{\_\_init\_\_}.
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q3: Gradient computation [8 pts]} In \texttt{word2vec.py}, implement the following methods
+\begin{itemize}
+  \item \texttt{get\_positive\_context\_gradient}: this computes $\nabla_{C_{c_+}} L_{CE}$.
+  \item \texttt{get\_negative\_context\_gradients}: this computes the list of $\nabla_{C_{c_{-i}}} L_{CE}$ for each negative context word $c_{-i}$.
+  \item \texttt{get\_target\_word\_gradient}: this computes $\nabla_{E_w} L_{CE}$.
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q4: Train word vectors [8 pts]} Run the main training loop by calling \texttt{word2vec.py} with the following command-line arguments (defined in \texttt{util.py}):
+\begin{itemize}
+  \item 4 epochs
+  \item Embedding dimension: 16
+  \item Learning rate: 0.2
+  \item Minimum frequency (for inclusion in vocabulary): 4
+  \item Number of negative samples: 4
+  \item Save vectors to a file called vectors.tsv
+\end{itemize}
+After that, run \texttt{python analysis.py --save\_vectors vectors.tsv --save\_plot vectors.png}.  This will take your saved vectors and produce a plot with the vectors (after using PCA to reduce dimensionality to 2) of a select choice of words.  In your readme file, please include: 
+\begin{itemize}
+  \item The total run-time of your training loop.  This will be printed by the main script.
+  \item The generated plot.
+  \item Describe in 2-3 sentences any trends that you see in these embeddings.
+\end{itemize}
+
+\section{Understanding Computation Graphs [24 pts]}
+
+\noindent {\bf Q1: Worked example}  Consider the function $f(x) = x^2 \times cx$.
+\begin{itemize}
+  \item Draw a computaton graph for this expression. [4 pts]
+  \item How many nodes are there (including input and output)? [2 pts]
+  \item For $x = 2$ and $c=3$: [12 pts]
+    \begin{itemize}
+      \item Compute the value of each node in a forward pass.
+      \item Compute $\frac{df}{dn}$ for each node $n$, using backpropagation.
+    \end{itemize}
+  \item Consider the node corresponding to $x^2$ in the graph.  For each of the following, write a symbolic expression and the numerical value (at $x=2$, $c=3$) for: [6 pts]
+    \begin{itemize}
+      \item The upstream derivative.
+      \item The local derivative.
+      \item The downstream derivative(s).
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
