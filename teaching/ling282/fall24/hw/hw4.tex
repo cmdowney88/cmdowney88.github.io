@@ -78,14 +78,14 @@ where $h_{t-1}$ is the previous hidden state, $x_t$ is the current input, and th
 \noindent {\bf Q3: LSTM Cell [8 pts]} An LSTM cell computes the next hidden state and \emph{memory} based on the previous hidden state and memory together with the current input.  Please consult the LSTM lecture slides for the entire set of equations (and details about motivation). In \texttt{model.py}, implement this computation in \texttt{LSTMCell.forward}. The initializer defines the linear layers that you will need.
 
 
-\section{Running the Classifier [15 pts]}
+\section{Running the Classifier [12 pts]}
 
 \texttt{run.py} contains a basic training loop for SST classification, using the last hidden state of an RNN. It will record the training and dev loss at each epoch, and save the best model according to dev loss.  At the end, it samples 10 random dev data points and prints the review, the gold label, and the model's prediction.
 
 \vspace{2em}
-\noindent {\bf Q1: Four different runs} By default, a Vanilla RNN will be used.  You can use an LSTM by specifying \texttt{--lstm} as a command-line argument.  Following \href{https://arxiv.org/abs/1409.2329}{this paper}, we have added dropout to the non-recurrent connections (i.e.\ from the inputs and to the output) of the model.
+\noindent {\bf Q1: Four different runs [8 pts]} By default, a Vanilla RNN will be used.  You can use an LSTM by specifying \texttt{--lstm} as a command-line argument.  Following \href{https://arxiv.org/abs/1409.2329}{this paper}, we have added dropout to the non-recurrent connections (i.e.\ from the inputs and to the output) of the model.
 
-\noindent Please run each of the following variations.  For each run, include in your written submission: the best dev loss, the epoch at which the best dev loss was achieved, and the best model's dev accuracy. \hfill [8 pts]
+\noindent Please run each of the following variations.  For each run, include in your written submission: the best dev loss, the epoch at which the best dev loss was achieved, and the best model's dev accuracy.
 \begin{itemize}
   \item Vanilla RNN, default parameters.  (This is just \texttt{run.py} with no command-line arguments.)
   \item Vanilla RNN, with $L_2$ regularization (via \texttt{--l2}) at 1e-4 and dropout (via \texttt{--dropout}) at 0.5.
@@ -94,7 +94,7 @@ where $h_{t-1}$ is the previous hidden state, $x_t$ is the current input, and th
 \end{itemize}
 
 \vspace{2em}
-\noindent {\bf Q2: Inspecting outputs} For the fourth run above, please include in your written submission the 10 random dev examples, with gold labels and model predictions here.  In 2-3 sentences, describe what you see and observe any trends in what the model gets right and what (and/or how) it gets things wrong. \hfill [7 pts]
+\noindent {\bf Q2: Inspecting outputs [4 pts]} For the fourth run above, please include in your written submission the 10 random dev examples, with gold labels and model predictions here.  In 2-3 sentences, describe what you see and observe any trends in what the model gets right and what (and/or how) it gets things wrong.
 
 
 \end{document}
