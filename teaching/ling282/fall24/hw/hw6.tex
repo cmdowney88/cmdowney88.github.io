@@ -183,7 +183,7 @@ In the remainder, you will implement key components of a character-level Seq2Seq
 \noindent {\bf Q3: Seq2SeqModel.decode [8 pts]} Implement the \texttt{decode} method for the module. This method should take in a batch of target sequences, plus the hidden and final states from the encoder, and use the decoder LSTM + attention to convert to logits over the vocabulary for the target sequence. \textbf{This method will call Seq2SeqModel.attention.}
 
 \vspace{2em}
-\noindent {\bf Q4: Seq2SeqModel.attention [8 pts]} Implement the \texttt{attention} module. This method should take series of vectors acting as Queries, as well as those acting as Keys/Values, plus a padding mask that we will provide for you. \textbf{The padding mask is created for you in forward, and must be passed to this method}. \hfill [10 pts]
+\noindent {\bf Q4: Seq2SeqModel.attention [8 pts]} Implement the \texttt{attention} module. This method should take series of vectors acting as Queries, as well as those acting as Keys/Values, plus a padding mask that we will provide for you. \textbf{The padding mask is created for you in forward, and must be passed to this method}.
 
 \section{Running the Translation Model [8 pts]}
 
@@ -195,10 +195,10 @@ In the remainder, you will implement key components of a character-level Seq2Seq
     \item \texttt{--train\_source data/europarl-v7-es-en/train.en.txt}
     \item \texttt{--train\_target data/europarl-v7-es-en/train.es.txt}
     \item \texttt{--output\_file test.en.txt.es}
-    \item \texttt{--batch\_size 16}
     \item \texttt{--num\_epochs 16}
     \item \texttt{--embedding\_dim 16}
     \item \texttt{--hidden\_dim 64}
+    \item \texttt{--generate\_every 4}
 \end{itemize}
 
 \vspace{2em}
