@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath}
+
+\newcommand{\bos}{\textless s\textgreater\:}
+\newcommand{\eos}{\textless /s\textgreater\:}
+\newcommand{\pad}{PAD\:}
+
+
+\begin{document}
+
+\title{Ling 282/482 hw7}
+\date{\vspace{-0.2in}Due 11pm on November 13, 2024}
+\maketitle
+
+
+\noindent In this assignment, you will 
+\begin{itemize}
+  \item Develop understanding of transformers, especially as encoders
+  \item Explain how pre-training and fine-tuning work
+  \item Implement a sentiment analysis model leveraging a pre-trained transformer model
+\end{itemize}
+
+\section*{Submission Instructions}
+This assignment contains both written and programming portions. The answers to written questions must be submitted in a *.txt or *.pdf file to Blackboard. You will receive an invitation link to complete the programming portion via Github Classroom. This will open a Github repository with starter code and missing portions for you to complete. When you are finished with implementation, simply commit and \textbf{push} your changes to the online repository that was created for you. Unless you request otherwise, I will grade your work \textbf{as of the most recent commit} in your repository, subject to any applicable late penalties.
+
+\section{Transformers and Pre-training [28 pts]}
+
+\noindent {\bf Q1: Parallelizability [10 pts]} One major cause for the development and subsequent adoption of transformers is that they are very parallelizable.
+\begin{itemize}
+  \item In your own words, why are recurrent neural networks hard/impossible to make parallel? [2-3 sentences, 4 pts]
+  \item How does the transformer architecture overcome this limitation and thus enable parallelizability? [2-3 sentences, 4 pts]
+  \item How is information about sequential order represented in the transformer? [2 pts]
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q2: Parameters [4 pts]} Let $d_e$ be the embedding/model dimension (i.e.\ $d_\text{mdoel}$) of a transformer model. (These can in principle be different, but are in practice made to be the same.)
+\begin{itemize}
+  \item In a self-attention layer with a single head of attention, how many parameters are there? (Note: you can ignore $W^O$ for this.) [2 pts]
+  \item In the position-wise feed-forward network in one block, how many parameters are there? You may write $d_f$ for the size of the single hidden layer of this sub-network. [2 pts]
+\end{itemize}
+
+\vspace{2em}
+\noindent {\bf Q3: Pre-training [14 pts]} Transformers have also helped jump-start the pre-training + fine-tuning approach to NLP tasks.
+\begin{itemize}
+  \item Provide at least two reasons as to why variants of language modeling are good pre-training tasks. [4 pts]
+  \item What are two differences between BERT (and its variants) and GPT (and its variants)? [4 pts]
+  \item Describe one method (e.g. diagnostic classifiers, adversarial data, \dots) for analyzing a pre-trained model and one example result from that method.  What do we learn from that result? [4 pts]
+  \item In your own words, describe one risk in the current approach to pre-training ever-larger language models on ever-larger datasets. [2 pts]
+\end{itemize}
+
+
+\section{Implementing a Transformer-based Sentiment Classifier [10 pts]}
+
+In the coding portion of this assignment, you will implement a model for sentiment analysis on the SST dataset, using a pretrained transformer as a text encoder.  In particular, the following paper trains and makes available several ``mini-BERTs'', i.e.\ transformer encoders trained on masked language modeling, but of significantly smaller sizes than BERT: \href{https://arxiv.org/pdf/1908.08962.pdf}{Well-Read Students Learn Better: On the Importance of Pre-training Compact Models}.  By default, we will use their smallest model, which has 2 layers and a hidden dimension of 128.
+
+\vspace{2em}
+\noindent {\bf Q1: Implement PretrainedClassifier}  In \texttt{model.py}, you will find the skeleton of a classifier that uses the representation of the special token `[CLS]' from a pretrained model (\texttt{self.encoder}) to make classification decisions.  You must:
+\begin{itemize}
+  \item In \texttt{\_\_init\_\_}, initialize \texttt{self.output} to be a linear layer of the right shape.  The comment there provides more information. [2 pts]
+  \item Implement \texttt{.forward}, which: extracts the top-layer `[CLS]' representation and then passes that through a linear layer to produce logits over the sentiment classes.  Please read the comments (and the docs referenced therein) closely. [8 pts]
+\end{itemize}
+
+
+\section{Running the Classifier [8 pts]}
+
+\texttt{run.py} contains a basic training loop for SST classification, using the final layer's representation of `[CLS]' of a pre-trained transformer encoder. It will record the training and dev loss at each epoch, and save the best model according to dev loss.  At the end, it samples 10 random dev data points and prints the review, the gold label, and the model's prediction.
+
+\vspace{2em}
+\noindent {\bf Q1: Default parameters} Execute \texttt{run.py} with its default arguments.  Please report: the best dev loss, the epoch at which the best dev loss was achieved, and the best model's dev accuracy.  Moreover, please include: the 10 random dev examples, with gold labels and model predictions here.  In 2-3 sentences, describe what you see and observe any trends in what the model gets right and what (and/or how) it gets things wrong. [4 pts]
+
+\vspace{2em}
+\noindent {\bf Q3: Comparison to RNN Classifier} In 2-3 sentences, please explain what differences you see in the classification decisions by this model using a pretrained transformer and the RNN classifier that you trained in HW6. What do you think may be causing these effects (or lack thereof)? [4 pts]
+
+\section{Testing your code}
+
+In the dropbox folder for this assignment, you will find a file \texttt{test\_hw7.py} with a few very simple unit tests for the methods that you need to implement.  You can verify that your code passes the tests by running \texttt{pytest} from your code's directory, with the course's conda environment activated.
+
+\end{document}
