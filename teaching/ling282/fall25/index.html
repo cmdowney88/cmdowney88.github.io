@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UR LING 282/482 (Fall 2025)</title>
+	<!-- Bootstrap core CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../css/scrolling-nav.css" rel="stylesheet">
+	<style>
+        section {
+            padding: 75px 0;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">LING 282/482: Deep Learning in Computational Linguistics (Fall '25)</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#information">Information</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#policies">Policies</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="information">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Course Description</h1>
+					<p class="lead">
+						The application of neural network methods - under the name
+						<em>Deep Learning</em> - has led to breakthroughs in a wide range of fields,
+						including in building language technologies (e.g. for search, translation,
+						text input prediction). This course will provide a hands-on introduction to
+						the use of deep learning methods for processing natural language. Methods to
+						be covered include static word embeddings, feed-forward networks for text,
+						recurrent neural networks, transformers, pre-training and transfer learning,
+						with applications including sentiment analysis, translation, generation, and 
+						testing Linguistic theory.
+					</p>
+
+					<table class="table">
+						<thead>
+							<tr>
+							<th>Days</th>
+							<th>Time</th>
+							<th>Location</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Monday and Wednesday</td>
+								<td>10:25 - 11:40 AM</td>
+								<td>Lattimore 513</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="pt-2">Teaching Staff</h2>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Role</th>
+								<th>Name</th>
+								<th>Office</th>
+								<th>Office Hours</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Instructor</td>
+								<td>
+									<a href="https://cmdowney88.github.io" target="_blank">C.M. Downey</a>
+								</td>
+								<td>Lattimore 507</td>
+								<td>TBD</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="pt-2">Recommended Textbooks</h2>
+
+					<p>
+						While relevant readings are posted in the schedule below, the following are
+						very good general resources.  Names that are used to refer to these works
+						are included in brackets.
+					</p>
+					<ul>
+						<li>[JM] Jurafsky and Martin, <em><a href="https://web.stanford.edu/~jurafsky/slp3/" target="_blank">Speech and Language Processing (3rd ed)</a></em></li>
+						<li>[YG] Yoav Goldberg, <em><a href="https://rochester.primo.exlibrisgroup.com/permalink/01ROCH_INST/1vg5sr1/alma9978538523405216" target="_blank">Neural Network Methods in Natural Language Processing</a></em> (digital access through UR librairies)</li>
+					</ul>
+
+
+					<h2 class="pt-2">Prerequisites</h2>
+					<ul>
+						<li>Programming in Python</li>
+						<li>Linux/Unix commands</li>
+						<li>Calculus 1 (differentiation concepts and rules)</li>
+					</ul>
+
+					<h2 class="pt-2">Course Resources</h2>
+
+					<ul>
+						<li>More information coming soon</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="policies" class="bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Grading and Policies</h1>
+					<h2 class="pt-2">Quizzes</h2>
+					<p>
+						Short quizzes will be held at the beginning of class on most Mondays, and
+						occasionally on Wednesdays if there is no class on Monday. All quiz dates
+						and topics are noted on the course calendar (see below). The quizzes are
+						primarily meant to promote active engagement with the material, and grades
+						will be adjusted so that a score of 85% is the median, within the
+						undergraduate and graduate sections separately. Grades will ONLY be adjusted
+						upward, never downward. For example, if the median grade on a quiz for
+						undergraduates is 75%, all undergraduate grades will be shifted 10% higher
+						(absolute). HOWEVER, quiz grades will be capped at 100%. If the median grade
+						is 85% or higher, grades will not be adjusted.
+					</p>
+					<h2 class="pt-2">Homework</h2>
+					<p>
+						Students will complete 8-10 homeworks, comprised of both written and
+						(Python) programming assignments. Unless noted otherwise on the schedule,
+						homeworks will be released on Wednesdays, and due at 11pm on the following
+						Wednesday. All homework will be submitted via Blackboard.
+					</p>
+					<p>
+						All deadlines and meeting times for this class are in "Eastern Time".
+						<strong>Please note:</strong> on Sunday November 2, this will change from
+						Eastern Daylight Time (EDT/UTC-4) to Eastern Standard Time (EST/UTC-5).
+					</p>
+					<h2 class="pt-2">Late work</h2>
+					<p>
+						All work should be submitted by 11:00pm the day it is due. Work that is
+						received late will incur the following penalties:
+					</p>
+					<ul>
+						<li>Up to 1 hour late: 5%</li>
+						<li>Up to 24 hours late: 10%</li>
+						<li>Up to 48 hours late: 20%</li>
+						<li>Later than 48 hours: not graded (0 for the assignment)</li>
+					</ul>
+					<p>
+						Extensions (without penalty) may be offered if they are requested within a
+						reasonable amount of time (relative to the reason for the extension) before
+						the work is due. Please don't hesitate to ask for an extension if you need
+						one.
+					</p>
+					<h2 class="pt-2">Final grading</h2>
+					<ul>
+						<li>40%: Homework assignments</li>
+						<li>30%: Term project??</li>
+						<li>20%: In-class quizzes</li>
+						<li>10%: Attendance/participation</li>
+					</ul>
+					<h2 class="pt-2">Exceptions</h2>
+					<p>
+						Students will not be penalized because of important civic, ethnic, family or
+						religious obligations, or university service. You will have a chance,
+						whenever feasible, to make up within a reasonable time any assignment that
+						is missed for these reasons. Absences for these reasons will count as
+						excused for the sake of the participation grade. But it is your job to
+						inform me of any expected missed work in advance, as soon as possible.
+					</p>
+					<h2 class="pt-2">Academic honesty</h2>
+					<p>
+						All assignments and activities associated with this course must be performed
+						in accordance with the University of Rochester's Academic Honesty Policy.
+						More information is available
+						<a href="https://www.rochester.edu/college/honesty" target="_blank">here</a>.
+						<strong>Please note:</strong> The use of Generative AI to produce any part
+						of the written or programming assignments is <strong>not allowed</strong>.
+						Due to the topicality of the course, I will make an exception if you
+						implement and train the model yourself (i.e. no use of pre-trained weights
+						or API calls to pre-existing models), and turn in the implementation with
+						the assignment you used in on. For the sake of your time, I do not recommend
+						this option.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="schedule">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Schedule</h1>
+					<br />
+					<table class="table">
+						<thead>
+							<tr>
+								<th width="10%">Date</th>
+								<th>Topics + Slides</th>
+								<th>Readings</th>
+								<th width="15%">Events</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Aug 25</td>
+								<td>
+									Introduction, Deep Learning History
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Aug 27</td>
+								<td>
+									Vectors and Linear Transformations
+								</td>
+								<td>
+									<a href="https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" target="_blank">Essence of Linear Algebra Ch.1-8</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sep 1</td>
+								<td colspan="3" align="center">Labor Day: no class</td>
+							</tr>
+							<tr>
+								<td>Sep 3</td>
+								<td>
+									Gradient Descent
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/5.pdf" target="_blank">5.4-5.6</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf" target="_blank">6</a>
+									<br />
+									YG 2
+								</td>
+								<td>
+									In-class Quiz (Vectors, Matrices, Linear Transformations)
+									<br><br>
+									hw1 released
+									<br />
+									[<a href="hw/hw1.pdf" target="_blank">pdf</a>, <a href="hw/hw1.tex" target="_blank">tex</a>]
+									<br />
+									[due Sep 10]
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 8</td>
+								<td>
+									Computation Graphs, Backpropagation
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf" target="_blank">7.5.3 - 7.5.5</a>
+									<br />
+									YG 5.1.1 - 5.1.2
+									<br /><br />
+									<a href="https://colah.github.io/posts/2015-08-Backprop/" target="_blank">Calculus on computational graphs</a>
+									<br />
+									<a href="http://cs231n.github.io/optimization-2/" target="_blank">CS 231n notes</a>
+									<br />
+									<a href="https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b" target="_blank">Yes, you should understand backprop</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sep 10</td>
+								<td>
+									Word Vectors, Word2Vec
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf" target="_blank">6.8 - 6.12</a>
+								</td>
+								<td>
+									hw2 released
+									<br>
+									[due Sep 17]
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 15</td>
+								<td>
+									Language Modeling, n-grams
+								</td>
+								<td></td>
+								<td>
+									In-class Quiz (Gradient Descent, Backpropagation)
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 17</td>
+								<td>
+									Neural Networks (Feed-forward)
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf" target="_blank">7.1 - 7.4</a>
+									<br />
+									YG 4
+								</td>
+								<td>
+									hw3 released
+									<br>
+									[due Sep 24]
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 22</td>
+								<td>
+									Feed-forward Language Models
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf" target="_blank">7.5</a>
+									<br />
+									YG 9
+									<br /><br />
+									<a href="http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf" target="_blank">A Neural Probabilistic Language Model</a> (Bengio et al 2003)
+									<br />
+									<a href="https://www.aclweb.org/anthology/P15-1162/" target="_blank">Deep Unordered Composition Rivals Syntactic Methods for Text Classification</a> (Iyyer et al 2015)
+								</td>
+								<td>
+									In-class Quiz
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 24</td>
+								<td>
+									Recurrent Neural Networks
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf" target="_blank">9.1-9.5</a>
+									<br /><br />
+									<a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/" target="_blank">The Unreasonable Effectiveness of Recurrent Neural Networks</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sep 29</td>
+								<td>
+									Vanishing Gradients, RNN Variants
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf" target="_blank">9.6</a>
+									<br />
+									YG 15
+									<br /><br />
+									<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTMs</a>
+									<br />
+									<a href="https://www.aclweb.org/anthology/D14-1179/" target="_blank">Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation</a>
+									<br />
+									<a href="http://proceedings.mlr.press/v28/pascanu13.html" target="_blank">On the difficulty of training recurrent neural networks</a>
+								</td>
+								<td>
+									hw4 released
+									<br>
+									[due Oct 6]
+								</td>
+							</tr>
+							<tr>
+								<td>Oct 1</td>
+								<td>
+									Sequence-to-Sequence, Attention
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf" target="_blank">10</a>
+									<br /><br />
+									<a href="https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks" target="_blank">Sequence to Sequence Learning with Neural Networks</a> (original seq2seq paper)
+									<br />
+									<a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a> (original seq2seq + attention paper)
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 6</td>
+								<td>Transformers 1</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf" target="_blank">9.7-9.9</a>
+									<br /><br />
+									<a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Attention is All You Need</a> (original Transformer paper)
+									<br />
+									<a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html" target="_blank">The Annotated Transformer</a>
+									<br />
+									<a href="http://jalammar.github.io/illustrated-transformer/" target="_blank">The Illustrated Transformer</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 8</td>
+								<td>
+									Transformers 2
+								</td>
+								<td>&quot;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 13</td>
+								<td colspan="3" align="center">Fall Break: no class</td>
+							</tr>
+							<tr>
+								<td>Oct 15</td>
+								<td>
+									Pre-training & Fine-tuning
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/11.pdf" target="_blank">11</a>
+									<br />
+									<a href="https://dl.acm.org/doi/pdf/10.1145/3347145" target="_blank">Contextual Word Representations: Putting Words into Computers</a>
+									<br />
+									<a href="http://jalammar.github.io/illustrated-bert/">The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)</a>
+								</td>
+								<td>
+									hw5 released
+									<br>
+									[due Oct 22]
+								</td>
+							</tr>
+							<tr>
+								<td>Oct 20</td>
+								<td>
+									Pre-training & Fine-tuning (cont.)
+								</td>
+								<td>&quot;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 22</td>
+								<td>
+									Text Tokenization
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 27</td>
+								<td>
+									Interpretability and Analysis
+								</td>
+								<td>
+									<a href="https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00254" target="_blank">Analysis Methods in Natural Language Processing</a>
+									<br />
+									<a href="https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00349" target="_blank">A Primer in BERTology</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 29</td>
+								<td>
+									Multilingual Language Models
+								</td>
+								<td>
+									<a href="https://proceedings.neurips.cc/paper/2019/file/c04c19c2c2474dbf5f7ac4372c5b9af1-Paper.pdf" target="_blank">Cross-Lingual Language Model Pretraining</a>
+									<br />
+									Optional / peruse if interested:
+									<br />
+									<a href="https://www.aclweb.org/anthology/2020.repl4nlp-1.16/" target="_blank">Are All Languages Created Equal in Multilingual BERT?</a>
+									<br />
+									<a href="https://www.aclweb.org/anthology/2020.acl-main.536/" target="_blank">Emerging Cross-lingual Structure in Pretrained Language Models</a>
+									<br />
+									<a href="https://arxiv.org/abs/1910.11856" target="_blank">On the Cross-lingual Transferability of Monolingual Representations</a>
+									<br />
+									<a href="https://arxiv.org/abs/1710.04087" target="_blank">Word Translation Without Parallel Data</a>
+									<br />
+									<a href="https://arxiv.org/abs/2104.07642" target="_blank">Bilingual alignment transfers to multilingual alignment for unsupervised parallel text mining</a>
+								</td>
+								<td>
+									hw6 released
+									<br>
+									[due Nov 5]
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 3</td>
+								<td>
+									Speech Data and Acoustics
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 5</td>
+								<td>
+									Neural Networks for Speech
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 10</td>
+								<td>
+									"Large Language Models" (LLMs)
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 12</td>
+								<td>
+									LLM Implications and Risks
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 17</td>
+								<td>
+									TBD
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 19</td>
+								<td>
+									TBD
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 24</td>
+								<td>
+									TBD
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 26</td>
+								<td colspan="3" align="center">Thanksgiving Break: no class</td>
+							</tr>
+							<tr>
+								<td>Dec 1</td>
+								<td>
+									TBD
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Dec 4</td>
+								<td>
+									TBD
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Dec 9</td>
+								<td>
+									Overflow / Summary / Review
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom JavaScript for this theme -->
+	<script src="../js/scrolling-nav.js"></script>
+</body>
+</html>
