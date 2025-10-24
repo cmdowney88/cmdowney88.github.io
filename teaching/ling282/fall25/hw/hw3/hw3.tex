@@ -135,18 +135,35 @@ This can be thought of as the inverse probability that the model assigns to the 
   \item Research and briefly explain (3-4 sentences): What makes GPUs faster than CPUs for neural network training? What kinds of operations benefit most from GPU acceleration? What kind of operations would not especially benefit? [3 pts]
 \end{enumerate}
 
-\vspace{2em}
+\newpage
 \section{Running the Language Model [27 pts]}
 
-\textbf{NOTE: Dedicated GPU resources for this assignment will be available on BlueHive within a few days of this homework's release. An updated version of this assignment with access instructions will be posted on Blackboard—watch for the announcement. You can complete Sections 1-3 now, but please wait for the updated instructions before starting Section 4. The code is runnable on laptops without GPU, but training will be significantly slower and may cause your processor to heat up.}
+\textbf{NOTE: This assignment should be run on BlueHive using GPU resources that have been reserved for our class, following the instructions below.}
 
-\texttt{run.py} contains a basic training loop for character-level language modeling. It will record the training and dev loss (and perplexity) at each epoch, and save the best model according to dev loss.  Periodically (as specified by a command-line flag), it also outputs generated text from the best model. \textbf{Note:} the reference implementation takes about 1 minute per epoch with default hyper-parameters. \textbf{Make sure you plan enough time to complete all three training runs in this part of the homework} (each will be at least 20 epochs).
+\vspace{1em}
+\noindent \textbf{Running on BlueHive:} The repository includes a \texttt{slurm\_run.sh} script for submitting batch (non-interactive) jobs to BlueHive's SLURM scheduler. To run your training job, use:
+\begin{verbatim}
+sbatch slurm_run.sh
+\end{verbatim}
+
+\noindent This script includes several important \texttt{\#SBATCH} directives at the top that configure how your job runs:
+\begin{itemize}
+  \item \texttt{\#SBATCH --reservation=ling282\_2025}: This line sends your job to the GPU nodes specifically reserved for our class, ensuring you have priority access.
+  \item \texttt{\#SBATCH -o gen.out} and \texttt{\#SBATCH -e gen.err}: These lines redirect the script's standard output (including your training progress and generated text) to \texttt{gen.out} and any error messages to \texttt{gen.err}. Check these files to see your results. \textbf{Hint:} You can use \texttt{tail -f gen.out} to watch your results in real time.
+  \item Other directives specify resource requirements like the number of CPUs (\texttt{-c 9}), memory (\texttt{--mem=44g}), GPU allocation (\texttt{--gres=gpu:1}), and maximum runtime (\texttt{-t 1:00:00}).
+\end{itemize}
+
+\noindent You can modify the Python command at the bottom of \texttt{slurm\_run.sh} to change hyperparameters (e.g., \texttt{python -u run.py --model\_type lstm --hidden\_size 256}). The code is also runnable on laptops without GPU, but training will be significantly slower and may cause your processor to heat up.
+
+\texttt{run.py} contains a basic training loop for character-level language modeling. It will record the training and dev loss (and perplexity) at each epoch, and save the best model according to dev loss.  Periodically (as specified by a command-line flag), it also outputs generated text from the best model. 
+
+\textbf{Note on run time:} the training script for an RNN completes about 8 epochs in 30 seconds (on our dedicated GPU node). A full training run of 64 epochs will thus take about 4 minutes. The Feedforward Language Model takes \textbf{much longer}, so I recommend decreasing the number of epochs if you experiment with this architecture.
 
 \vspace{2em}
 \noindent {\bf Q1: Default parameters [7 pts]} Execute \texttt{run.py} with its default arguments.  Paste below the texts that are generated every 4 epochs, as well as the epoch with the best dev loss and the dev perplexity from that epoch. In 3-4 sentences, describe any trends that you see in the generated text as training progresses. (Note that generated text will not necessarily be completely coherent: recall that this is a \emph{character-level} language model).
 
 \vspace{2em}
-\noindent {\bf Q2: Modify hyper-parameters [10 pts]} Re-run the training loop, modifying some combination of the following hyper-parameters, which are specified by command-line flags:
+\noindent {\bf Q2: Modify hyper-parameters [10 pts]} Re-run the training loop, modifying some combination of the following hyper-parameters, which are specified by command-line flags (see \texttt{run.py}):
 \begin{itemize}
   \item Model type (default: RNN. Options include LSTM and feedforward models)
   \item Hidden layer size
