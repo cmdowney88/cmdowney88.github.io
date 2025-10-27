@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6, p, em, ul, li {
     color: #646464;
 }
@@ -16,7 +20,18 @@ p.authors {
     margin-bottom: 0
 }
 
-/* Course page section padding */
+/* Handle fixed navbar overlap when scrolling to sections */
 section {
-    padding: 75px 0;
+    scroll-margin-top: 80px; /* Accounts for fixed navbar height when clicking nav links */
+}
+
+/* Course pages: add visual breathing room for sections with alternating backgrounds */
+body.course-page section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Course pages: first section needs extra top padding to clear fixed navbar on page load */
+body.course-page section:first-of-type {
+    padding-top: 80px;
 }
