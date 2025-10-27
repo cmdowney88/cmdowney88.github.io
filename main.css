@@ -15,3 +15,8 @@ p.venue {
 p.authors {
     margin-bottom: 0
 }
+
+/* Course page section padding */
+section {
+    padding: 75px 0;
+}
