@@ -6,6 +6,15 @@ h1, h2, h3, h4, h5, h6, p, em, ul, li {
     color: #646464;
 }
 
+/* UR brand colors for links */
+a {
+    color: #0066FD; /* Arpeggio Azure */
+}
+
+a:hover {
+    color: #003EFF; /* Quantum Cobalt */
+}
+
 .itemTitle h5,
 .itemTitle em,
 .itemTitle p {
