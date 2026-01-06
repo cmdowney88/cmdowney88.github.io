@@ -10,8 +10,3 @@ url: "https://cmdowney88.github.io"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 
-# Exclude existing static files from Jekyll processing
-exclude:
-  - index.html
-  - main.css
-  - teaching/
