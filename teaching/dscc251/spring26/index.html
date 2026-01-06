@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UR DSCC/LING 251/451 (Spring 2026)</title>
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Custom styles -->
+	<link href="../../../main.css" rel="stylesheet">
+</head>
+
+<body id="page-top" class="course-page" data-spy="scroll" data-target="#mainNav" data-offset="70">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #00205b;" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand" href="#page-top">DSCC/LING 251/451: Machine Learning with Limited Data (Spring '26)</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="../../../index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#information">Information</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#policies">Policies</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#schedule">Schedule</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="information">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Course Description</h1>
+					<p class="lead">
+						Many Machine Learning courses assume you have access to large, labeled
+						datasets. But what happens when you don't? Real-world applications
+						routinely face severe data constraints: rare diseases have few documented
+						cases, new products lack historical data, endangered species have limited
+						observations, and most of the world's languages have minimal digital
+						resources. How can we build effective ML systems when data is scarce?
+					</p>
+					<p class="lead">
+						This course will introduce state-of-the-art techniques for data-efficient
+						Machine Learning, focusing on three core areas: (1) transfer learning and
+						domain adaptation, (2) learning with limited supervision (semi-supervised,
+						self-supervised, and active learning), and (3) few-shot learning and data
+						augmentation strategies. Students will engage with recent research
+						literature and gain hands-on experience applying these methods across
+						diverse domains.
+					</p>
+					<p class="lead">
+						Assessment is based on a substantial term project where students implement
+						and evaluate data-efficient techniques on a problem of their choosing,
+						along with smaller assignments throughout the semester.
+					</p>
+
+					<table class="table">
+						<thead>
+							<tr>
+							<th>Days</th>
+							<th>Time</th>
+							<th>Location</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tuesday and Thursday</td>
+								<td>9:40 - 10:55 AM</td>
+								<td>Meliora 218</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="pt-2">Teaching Staff</h2>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Role</th>
+								<th>Name</th>
+								<th>Office</th>
+								<th>Office Hours</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Instructor</td>
+								<td>
+									<a href="https://cmdowney88.github.io" target="_blank">C.M. Downey</a>
+								</td>
+								<td>Lattimore 507</td>
+								<td>By appointment</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="pt-2">Prerequisites</h2>
+					<ul>
+						<li>
+							One foundational course in machine learning, such as: DSCC 240
+							(Data Mining), DSCC 265 (Statistical Machine Learning), CSC 246
+							(Machine Learning), or LING 282 (Deep Learning in Computational
+							Linguistics)
+						</li>
+						<li>Proficiency in Python programming</li>
+					</ul>
+
+					<h2 class="pt-2">Course Materials</h2>
+					<p>
+						There is no required textbook for this course. All readings will be
+						research papers or segments of online textbooks, which will be shared
+						via the course discussion platform.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="policies" class="bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Grading and Policies</h1>
+					<h2 class="pt-2">Attendance</h2>
+					<p>
+						Class attendance and participation are expected and count towards your grade.
+						I will keep track of attendance. Students are allowed to be absent from up
+						to two sessions for any reason, without needing to contact me, and without
+						penalty. These excused absences may be used for travel, illness, catching up
+						with other courses, etc. However, unexcused absences beyond these two
+						sessions will count against the student's final attendance grade, with the
+						exception of important obligations listed below.
+					</p>
+					<h2 class="pt-2">Student-led Discussions</h2>
+					<p>
+						This course has a seminar component. Each Tuesday starting in Week 3,
+						students will lead discussions on papers related to the previous Thursday's
+						lecture topic. This format gives you the weekend to read and prepare after
+						hearing the lecture.
+					</p>
+					<h3>Format</h3>
+					<p>
+						Each discussion session features two presenters, each leading approximately
+						30-35 minutes of class time. The exact number of presentations per student
+						will depend on final enrollment and will be announced after the add/drop
+						period. With typical enrollment, expect to present 2-3 times during the
+						semester.
+					</p>
+					<h3>Paper Selection</h3>
+					<p>
+						You will choose a research paper related to the week's topic. Papers must
+						be approved at least one week before your presentation, and shared with
+						the class by the Friday before so classmates can read it.
+						<strong>You are encouraged to select papers from your own area of
+						interest</strong>—this is an opportunity to explore how data-efficient
+						ML applies to problems you care about.
+					</p>
+					<h3>Presentation Expectations</h3>
+					<p>
+						Your presentation should:
+					</p>
+					<ul>
+						<li>
+							<strong>Summarize the paper</strong>: Explain the problem, methods,
+							and key results so that classmates who haven't read it can follow.
+						</li>
+						<li>
+							<strong>Connect to course material</strong>: Relate the paper to
+							concepts from the lecture and readings.
+						</li>
+						<li>
+							<strong>Offer your perspective</strong>: What are the paper's
+							strengths and limitations? What questions does it raise?
+						</li>
+						<li>
+							<strong>Facilitate discussion</strong>: Prepare 2-3 discussion
+							questions to engage the class. Your role is not just to present,
+							but to lead a conversation.
+						</li>
+					</ul>
+					<h3>Grading Criteria</h3>
+					<p>
+						Presentations will be graded on:
+					</p>
+					<ul>
+						<li>Clarity of explanation (Can we follow your summary?)</li>
+						<li>Depth of understanding (Do you grasp the key ideas and methods?)</li>
+						<li>Critical analysis (Can you identify strengths, weaknesses, and open questions?)</li>
+						<li>Discussion facilitation (Did you engage the class in meaningful conversation?)</li>
+					</ul>
+					<h3>Signup</h3>
+					<p>
+						After week 1, you will submit a form ranking your topic preferences. I will
+						assign slots algorithmically to maximize preference satisfaction, with
+						priority in later rounds going to students who received lower-ranked
+						preferences earlier. Once assignments are posted, you may trade slots
+						with another student if both parties email me to confirm.
+					</p>
+
+					<h2 class="pt-2">Term Project</h2>
+					<p>
+						You will complete a substantial term project applying data-efficient ML
+						techniques from this course to an application area of your choice. Projects
+						may be completed individually or in small groups (2-3 students). After
+						the interest survey (M1), I will suggest potential groupings based on
+						shared interests, but group formation is ultimately up to you. You are
+						encouraged to choose an application domain you care about—whether that's
+						NLP, medical imaging, climate science, robotics, or something else entirely.
+					</p>
+					<p>
+						Your project must pose and test a <strong>scientific hypothesis</strong>:
+						a specific, falsifiable prediction that your experiments can support or
+						refute. For example: "Active learning will reduce annotation requirements
+						by at least 40% compared to random sampling for task X," or "A model
+						pre-trained on domain Y will outperform general pre-training when
+						fine-tuned with limited labeled data from domain Y."
+					</p>
+					<p>
+						Deliverables include a final presentation to the class, a GitHub repository
+						with well-documented and reproducible code, and a writeup in the style of
+						a research paper. Progress will be tracked through milestones spaced
+						throughout the semester (see schedule below for dates and details).
+					</p>
+					<h3>Example Project Shapes</h3>
+					<p>
+						These are meant to illustrate the form of a valid project, not to prescribe
+						specific topics:
+					</p>
+					<ul>
+						<li>Compare two semi-supervised methods on a low-resource task in your domain</li>
+						<li>Measure how much active learning reduces annotation cost for a specific problem</li>
+						<li>Investigate whether a particular augmentation strategy helps more for one data type than another</li>
+						<li>Evaluate transfer learning from different source domains to your target task</li>
+					</ul>
+					<h2 class="pt-2">Late work</h2>
+					<p>
+						All deadlines are in Eastern Time. Work should be submitted by 11:00pm
+						the day it is due. Late work incurs the following penalties:
+					</p>
+					<ul>
+						<li>Up to 1 hour late: 5%</li>
+						<li>Up to 24 hours late: 10%</li>
+						<li>Up to 48 hours late: 20%</li>
+						<li>Later than 48 hours: not graded (0 for the assignment)</li>
+					</ul>
+					<p>
+						Extensions (without penalty) may be offered if they are requested within a
+						reasonable amount of time (relative to the reason for the extension) before
+						the work is due. Please don't hesitate to ask for an extension if you need
+						one.
+					</p>
+					<h2 class="pt-2">Final grading</h2>
+					<ul>
+						<li>45%: Term project</li>
+						<li>30%: Student-led discussions</li>
+						<li>25%: Participation (attendance + engagement in discussions)</li>
+					</ul>
+					<h2 class="pt-2">Exceptions</h2>
+					<p>
+						Students will not be penalized for civic, ethnic, family, or religious
+						obligations, or university service. You will have a chance to make up
+						missed work for these reasons. Please inform me in advance when possible.
+					</p>
+					<h2 class="pt-2">Academic honesty</h2>
+					<p>
+						All assignments and activities associated with this course must be performed
+						in accordance with the University of Rochester's Academic Honesty Policy.
+						More information is available
+						<a href="https://www.rochester.edu/college/honesty" target="_blank">here</a>.
+						<strong>Please note:</strong> The use of <strong>Generative AI</strong> to
+						produce discussion presentations, project milestone reports, or the final
+						writeup is <strong>not allowed</strong>. Generative AI is <strong>allowed
+						for programming work on the Term Project only</strong>.
+					</p>
+					<p>
+						This policy operates on the honor system. The goal of this course is for
+						you to develop real expertise that you'll need for research, job interviews,
+						and your career. If you outsource your thinking to AI, you mostly
+						shortchange yourself. That said, there's a difference between having AI
+						produce your work and using AI as a tool to help you learn. Using AI to
+						clarify a concept, explore an idea, or deepen your understanding is fine.
+						Using it to generate text or analysis that you then submit as your own is
+						not.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="schedule">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Schedule</h1>
+					<h4>(subject to change)</h4>
+					<br />
+					<table class="table">
+						<thead>
+							<tr>
+								<th width="10%">Date</th>
+								<th>Topics</th>
+								<th>Readings</th>
+								<th width="15%">Events</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Week 1-2: Foundations (all lectures) -->
+							<tr>
+								<td>Jan 20</td>
+								<td>Introduction: Syllabus, the data scarcity problem, LeCun's cake</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Jan 22</td>
+								<td>Supervised learning review</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Jan 27</td>
+								<td>Generalization and overfitting in low-data regimes</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Jan 29</td>
+								<td>Computing cluster setup; discussion format and expectations</td>
+								<td></td>
+								<td>
+									<strong>Project M1 due</strong>
+									<br>(Interest survey)
+								</td>
+							</tr>
+							<!-- Week 3: Foundations discussion + Unsupervised lecture -->
+							<tr>
+								<td>Feb 3</td>
+								<td><em>Student-led discussion: Foundations</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Feb 5</td>
+								<td>Unsupervised learning: clustering, codebook optimization</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 4 -->
+							<tr>
+								<td>Feb 10</td>
+								<td><em>Student-led discussion: Unsupervised learning</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Feb 12</td>
+								<td>Self-supervised learning: predicting the missing piece</td>
+								<td></td>
+								<td>
+									<strong>Project M2 due</strong>
+									<br>(Two proposals)
+								</td>
+							</tr>
+							<!-- Week 5 -->
+							<tr>
+								<td>Feb 17</td>
+								<td><em>Student-led discussion: Self-supervised learning</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Feb 19</td>
+								<td>Semi-supervised learning</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 6 -->
+							<tr>
+								<td>Feb 24</td>
+								<td><em>Student-led discussion: Semi-supervised learning</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Feb 26</td>
+								<td>Active learning</td>
+								<td></td>
+								<td>
+									<strong>Project M3 due</strong>
+									<br>(Abstract + plan)
+								</td>
+							</tr>
+							<!-- Week 7 -->
+							<tr>
+								<td>Mar 3</td>
+								<td><em>Student-led discussion: Active learning</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Mar 5</td>
+								<td>Weak supervision</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Spring Break -->
+							<tr>
+								<td>Mar 7-15</td>
+								<td colspan="3" align="center">Spring Break: no class</td>
+							</tr>
+							<!-- Week 8 -->
+							<tr>
+								<td>Mar 17</td>
+								<td><em>Student-led discussion: Weak supervision</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Mar 19</td>
+								<td>Transfer learning</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 9 -->
+							<tr>
+								<td>Mar 24</td>
+								<td><em>Student-led discussion: Transfer learning</em></td>
+								<td></td>
+								<td>
+									<strong>Project M4 due</strong>
+									<br>(Progress + repo)
+								</td>
+							</tr>
+							<tr>
+								<td>Mar 26</td>
+								<td>Domain adaptation</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 10 -->
+							<tr>
+								<td>Mar 31</td>
+								<td><em>Student-led discussion: Domain adaptation</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Apr 2</td>
+								<td>Few-shot learning</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 11 -->
+							<tr>
+								<td>Apr 7</td>
+								<td><em>Student-led discussion: Few-shot learning</em></td>
+								<td></td>
+								<td>
+									<strong>Code walkthroughs</strong>
+									<br>(Schedule TBD)
+								</td>
+							</tr>
+							<tr>
+								<td>Apr 9</td>
+								<td>Meta-learning</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 12 -->
+							<tr>
+								<td>Apr 14</td>
+								<td><em>Student-led discussion: Meta-learning</em></td>
+								<td></td>
+								<td>
+									<strong>Project M5 due</strong>
+									<br>(Final progress)
+								</td>
+							</tr>
+							<tr>
+								<td>Apr 16</td>
+								<td>Data augmentation and synthetic data</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 13 -->
+							<tr>
+								<td>Apr 21</td>
+								<td><em>Student-led discussion: Augmentation / Human-in-the-loop</em></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Apr 23</td>
+								<td>Human-in-the-loop ML</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<!-- Week 14: Project Presentations -->
+							<tr>
+								<td>Apr 28</td>
+								<td>Project presentations</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Apr 30</td>
+								<td>Project presentations</td>
+								<td></td>
+								<td>
+									<strong>Writeup due</strong>
+									<br>(Finals week)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
