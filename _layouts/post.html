@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="container">
+    <article class="blog-post">
+        <header class="mb-4">
+            <h1 class="display-4">{{ page.title }}</h1>
+            <p class="text-muted">
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %-d, %Y" }}
+                </time>
+            </p>
+        </header>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <hr class="my-5">
+
+        <nav class="post-navigation">
+            <a href="/blog/" class="btn btn-outline-primary">← Back to Blog</a>
+        </nav>
+    </article>
+</div>

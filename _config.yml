@@ -1,0 +1,17 @@
+# Minimal Jekyll configuration for blog section
+# Rest of site remains static HTML
+
+# Site information
+title: "C.M. Downey"
+description: "Personal website and blog"
+url: "https://cmdowney88.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude existing static files from Jekyll processing
+exclude:
+  - index.html
+  - main.css
+  - teaching/

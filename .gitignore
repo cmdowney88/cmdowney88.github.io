@@ -1,6 +1,10 @@
 .DS_Store
 .claude
 
+# Jekyll
+_site/
+.jekyll-cache/
+
 # LaTeX
 *.log
 *.out
