@@ -31,7 +31,7 @@ Rate your comfort level (1-5) with:
 
 ---
 
-## M2: Two Proposals (Due Feb 12)
+## M2: Two Proposals (Due Feb 24)
 
 Submit a PDF with the following:
 
@@ -53,7 +53,7 @@ The specifics will evolve through later milestones. The next milestone will have
 
 ---
 
-## M3: Abstract + Completion Plan (Due Feb 26)
+## M3: Abstract + Completion Plan (Due Mar 5)
 
 ### Abstract
 
