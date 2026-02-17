@@ -29,6 +29,10 @@ p.authors {
     margin-bottom: 0
 }
 
+#publications li {
+    margin-bottom: 1.25rem;
+}
+
 /* Handle fixed navbar overlap when scrolling to sections */
 section {
     scroll-margin-top: 80px; /* Accounts for fixed navbar height when clicking nav links */

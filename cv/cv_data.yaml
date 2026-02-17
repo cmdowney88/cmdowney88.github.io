@@ -1,0 +1,446 @@
+# Canonical CV Data for C.M. Downey
+# This file is the single source of truth for CV content.
+# Used to generate LaTeX CV and as a reference for the website HTML.
+#
+# Tags:
+#   undergrad        — undergraduate-era items
+#   internal-informal — lab meetings, reading groups, retreats, treehouse talks
+#   internal-formal   — department/university committees, internal grants
+#   archive           — items that aren't very relevant anymore but worth keeping on record
+
+name: C.M. Downey
+title: Assistant Professor
+affiliation: University of Rochester
+departments:
+  - Linguistics
+  - Data Science
+email: c.m.downey@rochester.edu
+links:
+  website: "https://cmdowney88.github.io"
+  lab: "https://ur2nlp.github.io"
+  bluesky: "https://bsky.app/profile/cmdowney.bsky.social"
+link_labels:
+  website: cmdowney88.github.io
+  lab: ur2nlp.github.io
+  bluesky: "@cmdowney"
+
+education:
+  - degree: Ph.D. Computational Linguistics
+    institution: University of Washington
+    dates: September 2018 - June 2024
+    details:
+      - "Advisors: Gina-Anne Levow and Shane Steinert-Threlkeld"
+      - "M.S. Computational Linguistics earned upon candidacy, June 2022"
+
+  - degree: B.S. Linguistics, Russian
+    institution: Tulane University
+    dates: August 2014 - May 2018
+    details:
+      - "Advisors: Charles Mignot and Judith Maxwell"
+      - "Thesis: Competing Motivations Driving Semi-Optimal Focus Construction Types"
+
+employment:
+  - position: Assistant Professor - Linguistics and Data Science
+    employer: University of Rochester
+    dates: July 2024 - Present
+
+  - position: Teaching/Research Assistant
+    employer: University of Washington Department of Linguistics
+    dates: September 2018 - June 2024
+
+  - position: Research Intern
+    employer: Microsoft (MSR Cryptography and Privacy)
+    dates: June - September 2022
+
+  - position: AI|ML Intern
+    employer: Apple (Siri Web Answers)
+    dates: June - September 2020
+
+honors:
+  - title: "Empire AI Beta Allocation - Rapid Adaptation of ASR Models in Data-Scarce Scenarios"
+    source: University of Rochester
+    dates: 2025
+    tags: [internal-formal]
+    details:
+      - "5,000 service units"
+
+  # NOTE: Listed as 2023 in LaTeX (award year), Jan-Mar 2024 on website (active term).
+  # Using 2024 as canonical since that's when it was held.
+  - title: Presidential Dissertation Fellowship
+    source: UW Graduate School
+    dates: January - March 2024
+
+  - title: Excellence in Linguistic Research Fellowship
+    source: UW Department of Linguistics
+    dates: September - December 2022
+
+  - title: "Foreign Language and Area Studies Fellowship - Inuktitut Language"
+    source: "U.S. Department of Education, UW Jackson School of International Studies"
+    dates: September 2019 - June 2020
+
+  - title: Newberry Research Library Summer Institute
+    source: The Newberry Library, Chicago
+    dates: July - August 2019
+    details:
+      - "Fellow; Indigenous Language Revitalization"
+
+  - title: Inducted into Phi Beta Kappa Honor Society
+    source: Tulane University
+    dates: 2018
+    tags: [undergrad]
+
+  - title: Excellence in Linguistics Award
+    source: Tulane University
+    dates: 2018
+    tags: [undergrad, archive]
+
+  - title: Outstanding Linguistics Thesis
+    source: Tulane University
+    dates: 2018
+    tags: [undergrad]
+
+  - title: Presidential Scholarship
+    source: Tulane University
+    dates: 2014
+    tags: [undergrad]
+
+publications:
+  peer_reviewed:
+    - title: "Linguistically Informed Evaluation of Multilingual ASR for African Languages"
+      date: 2026
+      year: 2026
+      venue: "Proceedings of the 7th Workshop on African Natural Language Processing (AfricaNLP)"
+      authors: "Fei-Yueh Chen, Lateef Adeleke, C.M. Downey"
+      status: to appear
+      links:
+        arxiv: "https://arxiv.org/abs/2602.04716"
+
+    - title: "Targeted Multilingual Adaptation for Low-resource Language Families"
+      date: November 2024
+      year: 2024
+      venue: "Findings of the Association for Computational Linguistics: EMNLP 2024"
+      authors: "C.M. Downey, Terra Blevins, Dhwani Serai, Dwija Parikh, Shane Steinert-Threlkeld"
+      links:
+        acl_anthology: "https://aclanthology.org/2024.findings-emnlp.918/"
+        arxiv: "https://arxiv.org/abs/2405.12413"
+        code: "https://github.com/CLMBRs/targeted-xlms"
+
+    - title: "Embedding Structure Matters: Comparing Methods to Adapt Multilingual Vocabularies to New Languages"
+      date: October 2023
+      year: 2023
+      venue: "Proceedings of the 3rd Workshop on Multilingual Representation Learning"
+      authors: "C.M. Downey, Terra Blevins, Nora Goldfine, Shane Steinert-Threlkeld"
+      note: "Best Paper Award"
+      links:
+        acl_anthology: "https://aclanthology.org/2023.mrl-1.20/"
+        arxiv: "https://arxiv.org/abs/2309.04679"
+        code: "https://github.com/cmdowney88/EmbeddingStructure"
+
+    - title: "Learning to Translate by Learning to Communicate"
+      date: October 2023
+      year: 2023
+      venue: "Proceedings of the 3rd Workshop on Multilingual Representation Learning"
+      # NOTE: Author order differs between website and LaTeX.
+      # Check ACL Anthology for canonical order.
+      authors: "C.M. Downey, Leo Z. Liu, Xuhui Zhou, Shane Steinert-Threlkeld"
+      links:
+        acl_anthology: "https://aclanthology.org/2023.mrl-1.17/"
+        arxiv: "https://arxiv.org/abs/2207.07025"
+        code: "https://github.com/CLMBRs/communication-translation"
+
+    - title: "A Masked Segmental Language Model for Natural Language Segmentation"
+      date: June 2022
+      year: 2022
+      venue: "Proceedings of the 19th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology"
+      authors: "C.M. Downey, Fei Xia, Gina-Anne Levow, Shane Steinert-Threlkeld"
+      links:
+        acl_anthology: "https://aclanthology.org/2022.sigmorphon-1.5/"
+        arxiv: "https://arxiv.org/abs/2104.07829"
+        code: "https://github.com/cmdowney88/SegmentalLMs"
+
+    - title: "Multilingual unsupervised sequence segmentation transfers to extremely low-resource languages"
+      date: May 2022
+      year: 2022
+      venue: "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics"
+      authors: "C.M. Downey, Shannon Drizin, Levon Haroutunian, Shivin Thukral"
+      links:
+        acl_anthology: "https://aclanthology.org/2022.acl-long.366/"
+        arxiv: "https://arxiv.org/abs/2110.08415"
+        code: "https://github.com/cmdowney88/XLSLM"
+
+    - title: "Emergent Communication Fine-tuning (EC-FT) for Pretrained Language Models"
+      date: April 2022
+      year: 2022
+      venue: "Proceedings of the 5th Annual Workshop on Emergent Communication"
+      authors: "Shane Steinert-Threlkeld, Leo Z. Liu, Xuhui Zhou, C.M. Downey"
+      note: "Runner-up Best Paper Award"
+      links:
+        openreview: "https://openreview.net/forum?id=SUqrM7WR7W5"
+        code: "https://github.com/CLMBRs/communication-translation"
+
+  other:
+    - title: "Adapting Pre-Trained Models and Leveraging Targeted Multilinguality"
+      date: 2024
+      year: 2024
+      venue: "PhD Dissertation, University of Washington"
+      authors: "C.M. Downey"
+      links:
+        repository: "https://digital.lib.washington.edu/researchworks/items/7cad9c10-a603-4300-8664-43de86343614"
+
+  preprints:
+    - title: "Planting and Mitigating Memorized Content in Predictive-Text Language Models"
+      date: December 2022
+      year: 2022
+      venue: Arxiv
+      authors: "C.M. Downey, Wei Dai, Huseyin A. Inan, Kim Laine, Saurabh Naik, Tomasz Religa"
+      links:
+        arxiv: "https://arxiv.org/abs/2212.08619"
+
+talks:
+  refereed:
+    - title: "Targeted Multilingual Adaptation for Low-resource Language Families"
+      date: November 2024
+      venue: "The 2024 Conference on Empirical Methods in Natural Language Processing"
+      format: poster
+
+    - title: "Embedding Structure Matters: Comparing Methods to Adapt Multilingual Vocabularies to New Languages"
+      date: December 2023
+      venue: "3rd Workshop on Multilingual Representation Learning, EMNLP"
+      format: oral
+
+    - title: "Learning to Translate by Learning to Communicate"
+      date: December 2023
+      venue: "3rd Workshop on Multilingual Representation Learning, EMNLP"
+      format: poster
+
+    - title: "A Masked Segmental Language Model for Natural Language Segmentation"
+      date: July 2022
+      venue: "19th SIGMORPHON Workshop, NAACL"
+      format: oral
+
+    - title: "Multilingual unsupervised sequence segmentation transfers to extremely low-resource languages"
+      date: May 2022
+      venue: "60th Annual Meeting of the Association for Computational Linguistics"
+      format: poster
+
+  invited:
+    - title: "Multilingual Tokenizer Adaptation: Specializing Representations for Target Languages"
+      date: December 2025
+      venue: "Speech and text LLMs revisited, Université Paris Cité"
+      links:
+        event: "https://altae.u-pariscite.fr/events/event/whisper2/"
+
+    - title: "Fostering Grassroots Language Technology and AI"
+      date: September 19 2025
+      venue: "Goergen Institute for Data Science and AI 10th Anniversary"
+
+    - title: "Improving Computational Tools for Under-resourced and Endangered Languages"
+      instances:
+        - venue: "University at Buffalo Department of Linguistics"
+          date: February 6 2026
+        - venue: "George Mason University Linguistics Colloquium"
+          date: April 9 2025
+        - venue: "University of Rochester Center for Integrated Research Computing Symposium"
+          date: October 18 2024
+        - venue: "University of British Columbia Department of Linguistics"
+          date: February 15 2024
+        - venue: "University of Pittsburgh Department of Linguistics"
+          date: February 9 2024
+        - venue: "Macalester College Department of Linguistics"
+          date: January 30 2024
+        - venue: "University of Utah Department of Linguistics"
+          date: January 23 2024
+        - venue: "University of Rochester Goergen Institute for Data Science and Department of Linguistics"
+          date: November 29 2023
+
+    - title: "Integrating NLP Models into Language Documentation Workflows"
+      date: October 26 2024
+      venue: "Central New York Humanities Corridor Sound Structures Workshop"
+
+    - title: "Comparing Methods to Adapt Multilingual Vocabularies to New Languages"
+      date: September 13 2023
+      venue: "UW NLP Retreat"
+      tags: [internal-informal]
+
+    - title: "Collaborative Coding Best Practices"
+      tags: [internal-informal]
+      instances:
+        - venue: "UW Computational Linguistics Treehouse"
+          date: February 10 2023
+        - venue: "UW Computational Linguistics Treehouse"
+          date: October 22 2021
+
+    - title: "Introduction to Differential Privacy"
+      date: October 14 2022
+      venue: "UW Computational Linguistics Treehouse"
+      tags: [internal-informal]
+
+    - title: "Learning to Translate by Learning to Communicate"
+      date: September 26 2022
+      venue: "UW NLP Retreat"
+      tags: [internal-informal]
+
+    - title: "Multilingual unsupervised sequence segmentation transfers to extremely low-resource languages"
+      date: May 5 2022
+      venue: "UW Electrical Engineering TIAL Lab (PI: Mari Ostendorf)"
+      tags: [internal-informal]
+
+    - title: "A Masked Segmental Language Model for Unsupervised Sequence Segmentation"
+      date: September 20 2021
+      venue: "UW NLP Retreat"
+      tags: [internal-informal]
+
+    - title: "Segmental Language Modeling"
+      date: April 20 2021
+      venue: "UW CLMBR Lab Group (PI: Shane Steinert-Threlkeld)"
+      tags: [internal-informal]
+
+    - title: "Archival Work and Language Revitalization at the NCAIS Summer Institute"
+      date: December 13 2019
+      venue: "UW Linguistics Field Reports Meeting"
+      tags: [internal-informal]
+
+    - title: "Dependency vs Phrase-Structure Trees"
+      date: October 4 2019
+      venue: "University of Washington Linguistics Syntax Roundtable"
+      tags: [internal-informal]
+
+    - title: "Subword Segmentation for Morphologically Complex Languages"
+      date: September 28 2019
+      venue: "UW NLP Retreat"
+      tags: [internal-informal]
+
+teaching:
+  instructor:
+    - course: "DSCC 251/451: Machine Learning with Limited Data"
+      institution: University of Rochester
+      semesters:
+        - Spring 2026
+
+    - course: "LING 250/450: Data Science for Linguistics"
+      institution: University of Rochester
+      semesters:
+        - Spring 2026
+        - Spring 2025
+
+    - course: "LING 282/482: Deep Learning for Computational Linguistics"
+      institution: University of Rochester
+      semesters:
+        - Fall 2025
+        - Fall 2024
+
+    - course: "LING 473: Basics for Computational Linguistics"
+      institution: University of Washington
+      semesters:
+        - Summer 2023
+      details:
+        - "Co-Instructor with Emily Proch Ahn"
+
+    - course: "LING 574: Deep Learning for Natural Language Processing"
+      institution: University of Washington
+      semesters:
+        - Spring 2023
+
+  teaching_assistant:
+    - course: "LING 572: Advanced Statistical Methods for Natural Language Processing"
+      institution: University of Washington
+      semesters:
+        - Winter 2023
+
+    - course: "LING 574: Deep Learning for Natural Language Processing"
+      institution: University of Washington
+      semesters:
+        - Spring 2022
+        - Spring 2021
+
+    - course: "LING 200: Introduction to Linguistic Thought"
+      institution: University of Washington
+      semesters:
+        - Winter 2022
+        - Spring 2019
+        - Fall 2018
+
+    - course: "LING 269: Swearing and Taboo Language"
+      institution: University of Washington
+      semesters:
+        - Fall 2021
+
+    - course: "LING 566: Introduction to Syntax for Computational Linguistics"
+      institution: University of Washington
+      semesters:
+        - Fall 2020
+
+    - course: "ASL 305: Introduction to American Deaf Culture"
+      institution: University of Washington
+      role: Grader
+      semesters:
+        - Spring 2019
+
+    - course: "LING 406: Introduction to Syntax"
+      institution: University of Washington
+      role: Grader
+      semesters:
+        - Fall 2018
+
+  guest_lectures:
+    - title: "Multilingual Language Modeling"
+      course: "LING 574: Deep Learning for NLP"
+      institution: University of Washington
+      instructor: Shane Steinert-Threlkeld
+      dates:
+        - May 22 2024
+        - May 18 2022
+        - May 26 2021
+
+    - title: "Computational Linguistics and Language Revitalization"
+      instances:
+        - course: "LING 234: Language and Diversity"
+          institution: University of Washington
+          instructor: Lorna Rozelle
+          date: May 4 2020
+        - course: "ENGL 4717: NAIS Capstone Seminar"
+          institution: University of Colorado
+          instructor: Penelope Kelsey
+          date: January 27 2020
+
+service:
+  - title: "Goergen Institute for Data Science MS Admissions Committee"
+    role: Reviewer
+    dates: 2025
+    tags: [internal-formal]
+
+  - title: "UR Linguistics Graduate Admissions Committee"
+    role: Reviewer
+    dates: 2025
+    tags: [internal-formal]
+
+  - title: "National Science Foundation"
+    role: Panelist
+    dates: 2025
+
+  - title: "Workshop on NLP for Indigenous Languages of the Americas (AmericasNLP)"
+    role: Reviewer
+    dates: 2024
+
+  - title: "Workshop on NLP for Indigenous Languages of the Americas (AmericasNLP)"
+    role: Reviewer
+    dates: 2023
+
+  - title: "Multilingual Information Access Workshop"
+    role: Reviewer
+    dates: 2022
+
+  - title: "Linguistics Society of UW"
+    role: Vice President
+    dates: 2020 - 2021
+    tags: [archive]
+
+  - title: "ACL Reviewer-Paper Assignment System"
+    role: "Technical Assistant/Developer"
+    dates: December 2020 - February 2021
+    tags: [archive]
+
+  - title: "North West Linguistics Conference (NWLC)"
+    role: Organizer
+    dates: 2020
+    tags: [archive]
