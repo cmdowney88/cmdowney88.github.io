@@ -81,7 +81,9 @@ Use this milestone to request any specific guidance you think would help. I can 
 
 ---
 
-## M4: Progress Report + GitHub Repo (Due Mar 24)
+## M4: Progress Report + GitHub Repo (Due Apr 3)
+
+See [full requirements](m4_progress_report.md).
 
 ### Progress Report (PDF)
 
@@ -106,7 +108,7 @@ Your `README.md` should contain:
 
 ---
 
-## Code Walkthrough (Week of Apr 7)
+## Code Walkthrough (Week of Apr 14)
 
 Book a 30-minute appointment to review your software infrastructure (scripts for data gathering, cleaning, training, analysis).
 
@@ -114,7 +116,7 @@ At this stage, your code should be complete or nearly complete, and your attenti
 
 ---
 
-## M5: Final Progress Report (Due Apr 14)
+## M5: Final Progress Report (Due Apr 24)
 
 Submit a PDF progress report including:
 1. Work completed since M4
