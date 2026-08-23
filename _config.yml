@@ -10,3 +10,10 @@ url: "https://cmdowney88.github.io"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 
+# Local previewing only: keep bundler's vendored gems and the Gemfile out of
+# the built site. GitHub Pages never sees these.
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
