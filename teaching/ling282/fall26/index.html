@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UR LING 282/482 (Fall 2026)</title>
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Custom styles -->
+	<link href="../../../main.css" rel="stylesheet">
+</head>
+
+<body id="page-top" class="course-page" data-spy="scroll" data-target="#mainNav" data-offset="70">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #00205b;" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand" href="#page-top">LING 282/482: Deep Learning in Computational Linguistics (Fall '26)</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="../../../index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#information">Information</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#policies">Policies</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#schedule">Schedule</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="information">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Course Description</h1>
+					<p class="lead">
+						Models of language based on large Neural Networks — otherwise known as
+						<em>Deep Learning</em> — are revolutionizing the way we work, learn, and
+						communicate. But how do these models work on a fundamental level? What
+						enables their (seemingly) human-like command of language? In this course,
+						we will focus on building an understanding of <em>neural language models</em>
+						from the ground up, starting with mathematical fundamentals, introducing
+						crucial topics from Computational Linguistics and Machine Learning,
+						surveying current and historical approaches to building neural LMs, and
+						gaining hands-on experience training and analyzing such models on UR's
+						BlueHive computing cluster.
+					</p>
+
+					<table class="table">
+						<thead>
+							<tr>
+							<th>Days</th>
+							<th>Time</th>
+							<th>Location</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Monday and Wednesday</td>
+								<td>10:25 - 11:40 AM</td>
+								<td>Lattimore 513</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="pt-2">Teaching Staff</h2>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Role</th>
+								<th>Name</th>
+								<th>Office</th>
+								<th>Office Hours</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Instructor</td>
+								<td>
+									<a href="https://cmdowney88.github.io" target="_blank">C.M. Downey</a>
+								</td>
+								<td>Lattimore 507</td>
+								<td>TBD</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="pt-2">"Required" Textbook</h2>
+					<p>
+						Required readings are posted in the schedule below, drawn mostly from the
+						following online textbook (abbreviated JM in the schedule), which is a very
+						good general resource:
+					</p>
+					<ul>
+						<li>(JM) Jurafsky and Martin, <em><a href="https://web.stanford.edu/~jurafsky/slp3/" target="_blank">Speech and Language Processing (3rd ed)</a></em></li>
+					</ul>
+
+
+					<h2 class="pt-2">Prerequisites</h2>
+					<ul>
+						<li>1 semester of Calculus (differentiation concepts and rules)</li>
+						<li>Programming in Python</li>
+						<li>Linux/Unix commands</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="policies" class="bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Grading and Policies</h1>
+					<h2 class="pt-2">Attendance</h2>
+					<p>
+						Class attendance and participation are expected and count towards your grade.
+						I will keep track of attendance. Students are allowed to be absent from up
+						to four sessions for any reason, without needing to contact me, and without
+						penalty. These excused absences may be used for travel, illness, catching up
+						with other courses, etc. However, unexecused absences beyond these four
+						sessions will count against the student's final attendance grade, with the
+						exception of important obligations listed below.
+					</p>
+					<h2 class="pt-2">Quizzes</h2>
+					<p>
+						Short quizzes will be held at the beginning of class on most Mondays, and
+						occasionally on Wednesdays if there is no class on Monday. All quiz dates
+						and topics are noted on the course calendar (see below). The quizzes are
+						primarily meant to promote active engagement with the material, and grades
+						will be adjusted so that a score of 85% is the median, within the
+						undergraduate and graduate sections separately. Grades will ONLY be adjusted
+						upward, never downward. For example, if the median grade on a quiz for
+						undergraduates is 75%, all undergraduate grades will be shifted 10% higher
+						(absolute). HOWEVER, quiz grades will be capped at 100%. If the median grade
+						is 85% or higher, grades will not be adjusted.
+					</p>
+					<h2 class="pt-2">Homework</h2>
+					<p>
+						Students will complete 6-8 homeworks, comprised of both written and
+						(Python) programming assignments. Unless noted otherwise on the schedule,
+						homeworks will be released on Wednesdays, and due at 11pm on the following
+						Wednesday. All homework will be submitted via Blackboard.
+					</p>
+					<h2 class="pt-2">Term Project</h2>
+					<p>
+						Students will work in assigned groups to complete a substantial term project
+						focused on answering a question about language or linguistic theory with
+						deep learning methods. This will minimally involve training or fine-tuning
+						a neural model of language (though not necessarily a Language Model in the
+						technical sense). This project will be scientifically-oriented, i.e. going
+						beyond simply engineering a model to solve an NLP task, and seeking to
+						extend scientific understanding of Language or Language Models. Within these
+						parameters, student groups are encouraged to creatively pursue a topic of
+						interest to them.
+					</p>
+					<p>
+						Four project milestones are assigned over the course of the semester to
+						ensure timely progress and feasible goals (specifications for each will be
+						posted as the semester progresses):
+					</p>
+					<ul>
+						<li><strong>M1</strong> (Sep 23): interest survey and initial brainstorming</li>
+						<li><strong>M2</strong> (Oct 14): two informal project proposals</li>
+						<li><strong>M3</strong> (Nov 9): abstract and completion plan (commit to one idea)</li>
+						<li><strong>M4</strong> (Nov 23): progress checkpoint and Github repository</li>
+					</ul>
+					<p>
+						Your research direction may evolve as you work. Pivoting is allowed &mdash;
+						and often necessary &mdash; when original plans prove unfruitful. The
+						milestone structure exists precisely to catch these moments early.
+					</p>
+					<p>
+						At the end of the semester, each project group will present their work and
+						results to the class, submit a Github repository containing project
+						software, and submit a final writeup in the style of a scientific research
+						paper (due Dec 18).
+					</p>
+					<h2 class="pt-2">Late work</h2>
+					<p>
+						All deadlines and meeting times for this class are in "Eastern Time".
+						<strong>Please note:</strong> on Sunday November 1, this will change from
+						Eastern Daylight Time (EDT/UTC-4) to Eastern Standard Time (EST/UTC-5). All
+						work should be submitted by 11:00pm the day it is due. Work that is received
+						late will incur the following penalties:
+					</p>
+					<ul>
+						<li>Up to 1 hour late: 5%</li>
+						<li>Up to 24 hours late: 10%</li>
+						<li>Up to 48 hours late: 20%</li>
+						<li>Later than 48 hours: not graded (0 for the assignment)</li>
+					</ul>
+					<p>
+						Extensions (without penalty) may be offered if they are requested within a
+						reasonable amount of time (relative to the reason for the extension) before
+						the work is due. Please don't hesitate to ask for an extension if you need
+						one.
+					</p>
+					<h2 class="pt-2">Final grading</h2>
+					<ul>
+						<li>40%: Homework assignments</li>
+						<li>30%: Term project</li>
+						<li>20%: In-class quizzes</li>
+						<li>10%: Attendance/participation</li>
+					</ul>
+					<h2 class="pt-2">Exceptions</h2>
+					<p>
+						Students will not be penalized because of important civic, ethnic, family or
+						religious obligations, or university service. You will have a chance,
+						whenever feasible, to make up within a reasonable time any assignment that
+						is missed for these reasons. Absences for these reasons will count as
+						excused for the sake of the participation grade. But it is your job to
+						inform me of any expected missed work in advance, as soon as possible.
+					</p>
+					<h2 class="pt-2">Academic honesty</h2>
+					<p>
+						All assignments and activities associated with this course must be performed
+						in accordance with the University of Rochester's Academic Honesty Policy.
+						More information is available
+						<a href="https://www.rochester.edu/college/honesty" target="_blank">here</a>.
+						<strong>Please note:</strong> The use of <strong>Generative AI</strong> to
+						produce any part of the written or programming homeworks is
+						<strong>not allowed</strong>. Generative AI is <strong>allowed for
+						programming work on the Term Project only</strong> (the final writeup must
+						be your own work).
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="schedule">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<h1>Schedule</h1>
+					<h4>(subject to change)</h4>
+					<br />
+					<table class="table">
+						<thead>
+							<tr>
+								<th width="10%">Date</th>
+								<th>Topics + Slides</th>
+								<th>Required Readings</th>
+								<th width="15%">Events</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Aug 31</td>
+								<td>
+									Introduction, Deep Learning History
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sep 2</td>
+								<td>
+									Vectors and Linear Transformations
+								</td>
+								<td>
+									<a href="https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" target="_blank">Essence of Linear Algebra Ch.1-8 (Youtube)</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sep 7</td>
+								<td colspan="3" align="center">Labor Day: no class</td>
+							</tr>
+							<tr>
+								<td>Sep 9</td>
+								<td>
+									The Perceptron
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf" target="_blank">4.0-4.3</a>
+								</td>
+								<td>
+									<strong>in-class quiz:</strong> vectors, matrices, linear transformations
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 14</td>
+								<td>
+									Supervised Learning, Gradient Descent
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf" target="_blank">4.5-4.7</a>
+								</td>
+								<td>
+									<strong>in-class quiz:</strong> function derivatives (Calc. pre-reqs)
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 16</td>
+								<td>
+									Computation Graphs, Backpropagation
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf" target="_blank">6.6.3 - 6.6.5</a>
+									<br /><br />
+									<a href="https://colah.github.io/posts/2015-08-Backprop/" target="_blank">Calculus on computational graphs</a>
+									<br />
+									<a href="https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b" target="_blank">Yes, you should understand backprop</a>
+								</td>
+								<td>
+									<strong>hw1 released</strong>
+									<br />
+									[due Sep 23]
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 21</td>
+								<td>
+									Word Vectors, word2vec
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/5.pdf" target="_blank">5.0, 5.2-5.9</a>
+								</td>
+								<td>
+									<strong>in-class quiz:</strong> gradients, computation graphs
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 23</td>
+								<td>
+									word2vec (cont.)
+									<br>Language Modeling, N-Grams
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf" target="_blank">3.0-3.6</a>
+								</td>
+								<td>
+									<strong>hw1 due</strong>
+									<br /><br />
+									<strong>project M1 due</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>Sep 28</td>
+								<td>
+									BlueHive Cluster
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sep 30</td>
+								<td>
+									PyTorch
+									<br>Feed-forward Language Models
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf" target="_blank">6.0-6.3, 6.5-6.7</a>
+									<br /><br />
+									<a href="http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf" target="_blank">A Neural Probabilistic Language Model</a> (Bengio et al 2003)
+								</td>
+								<td>
+									<strong>hw2 released</strong>
+									<br />
+									[due Oct 14]
+								</td>
+							</tr>
+							<tr>
+								<td>Oct 5</td>
+								<td>
+									Feed-forward Language Models (cont.)
+									<br>Recurrent Neural Networks
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf" target="_blank">13.0-13.3</a>
+									<br /><br />
+									<a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/" target="_blank">The Unreasonable Effectiveness of Recurrent Neural Networks</a>
+								</td>
+								<td>
+									<strong>in-class quiz:</strong> Chain Rule (Prob), n-grams, FFNNs
+								</td>
+							</tr>
+							<tr>
+								<td>Oct 7</td>
+								<td>
+									RNNs (cont.)
+									<br>Vanishing Gradients, RNN Variants
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf" target="_blank">13.5-13.6</a>
+									<br /><br />
+									<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTMs</a>
+									<br />
+									<a href="https://www.aclweb.org/anthology/D14-1179/" target="_blank">Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation</a>
+									<br />
+									<a href="http://proceedings.mlr.press/v28/pascanu13.html" target="_blank">On the difficulty of training recurrent neural networks</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 12</td>
+								<td colspan="3" align="center">Fall Break: no class</td>
+							</tr>
+							<tr>
+								<td>Oct 14</td>
+								<td>
+									Sampling and Generation
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf" target="_blank">7.4</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf" target="_blank">8.6</a>
+								</td>
+								<td>
+									<strong>hw2 due</strong>
+									<br /><br />
+									<strong>project M2 due</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>Oct 19</td>
+								<td>
+									Sequence-to-Sequence, Attention
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf" target="_blank">13.7-13.8</a>
+									<br /><br />
+									<a href="https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks" target="_blank">Sequence to Sequence Learning with Neural Networks</a> (original seq2seq paper)
+									<br />
+									<a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a> (original seq2seq + attention paper)
+								</td>
+								<td>
+									<strong>in-class quiz:</strong> RNNs, LSTMs, seq2seq
+								</td>
+							</tr>
+							<tr>
+								<td>Oct 21</td>
+								<td>
+									Transformers 1
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf" target="_blank">8.0-8.7</a>
+									<br /><br />
+									<a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Attention is All You Need</a> (original Transformer paper)
+									<br />
+									<a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html" target="_blank">The Annotated Transformer</a>
+									<br />
+									<a href="http://jalammar.github.io/illustrated-transformer/" target="_blank">The Illustrated Transformer</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 26</td>
+								<td>
+									Transformers 2
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf" target="_blank">8.0-8.7</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Oct 28</td>
+								<td>
+									<em>In-class activity: term project round-robin</em>
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 2</td>
+								<td>
+									Pre-training &amp; Fine-tuning 1
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf" target="_blank">7.1, 7.5</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf" target="_blank">10</a>
+									<br />
+									<a href="https://dl.acm.org/doi/pdf/10.1145/3347145" target="_blank">Contextual Word Representations: Putting Words into Computers</a>
+									<br />
+									<a href="http://jalammar.github.io/illustrated-bert/" target="_blank">The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)</a>
+								</td>
+								<td>
+									<strong>in-class quiz:</strong> Attention, Transformers
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 4</td>
+								<td>
+									Pre-training &amp; Fine-tuning 2
+								</td>
+								<td>
+									&quot;
+								</td>
+								<td>
+									<strong>hw3 released</strong>
+									<br />
+									[due Nov 11]
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 9</td>
+								<td>
+									Text Tokenization
+								</td>
+								<td></td>
+								<td>
+									<strong>project M3 due</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 11</td>
+								<td>
+									Multilingual Language Models
+								</td>
+								<td>
+									<a href="https://proceedings.neurips.cc/paper/2019/file/c04c19c2c2474dbf5f7ac4372c5b9af1-Paper.pdf" target="_blank">Cross-Lingual Language Model Pretraining</a>
+									<br />
+									Optional / peruse if interested:
+									<br />
+									<a href="https://www.aclweb.org/anthology/2020.repl4nlp-1.16/" target="_blank">Are All Languages Created Equal in Multilingual BERT?</a>
+									<br />
+									<a href="https://www.aclweb.org/anthology/2020.acl-main.536/" target="_blank">Emerging Cross-lingual Structure in Pretrained Language Models</a>
+									<br />
+									<a href="https://arxiv.org/abs/1910.11856" target="_blank">On the Cross-lingual Transferability of Monolingual Representations</a>
+									<br />
+									<a href="https://arxiv.org/abs/1710.04087" target="_blank">Word Translation Without Parallel Data</a>
+									<br />
+									<a href="https://arxiv.org/abs/2104.07642" target="_blank">Bilingual alignment transfers to multilingual alignment for unsupervised parallel text mining</a>
+								</td>
+								<td>
+									<strong>hw3 due</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 16</td>
+								<td>
+									"Large Language Models" (LLMs) 1
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf" target="_blank">7.2-7.3</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf" target="_blank">9.0-9.1</a>
+								</td>
+								<td>
+									<strong>in-class quiz:</strong><br>Pre-training, Tokenization, Multilingual LMs
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 18</td>
+								<td>
+									"Large Language Models" (LLMs) 2
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf" target="_blank">9.2-9.4</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nov 23</td>
+								<td>
+									Speech Data and Acoustics
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/15.pdf" target="_blank">15.0-15.3</a>
+								</td>
+								<td>
+									<strong>project M4 due</strong>
+								</td>
+							</tr>
+							<tr>
+								<td>Nov 25</td>
+								<td colspan="3" align="center">Thanksgiving Recess: no class</td>
+							</tr>
+							<tr>
+								<td>Nov 30</td>
+								<td>
+									Neural Networks for Speech
+								</td>
+								<td>
+									JM <a href="https://web.stanford.edu/~jurafsky/slp3/15.pdf" target="_blank">15.5-15.6</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Dec 2</td>
+								<td>
+									<em>In-class activity: peer-review workshop</em>
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Dec 7</td>
+								<td>
+									Project Presentations
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Dec 9</td>
+								<td>
+									Project Presentations
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Dec 14</td>
+								<td>
+									Project Presentations (cont.)
+									<br>Course wrap-up
+								</td>
+								<td></td>
+								<td>
+									<strong>final writeup due Dec 18</strong>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
