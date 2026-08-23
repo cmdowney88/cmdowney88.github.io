@@ -1,0 +1,44 @@
+---
+layout: default
+body_class: guide-page
+---
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <header class="guide-header">
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}<p class="lead text-muted">{{ page.subtitle }}</p>{% endif %}
+            </header>
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+<script>
+    // add a copy button to every fenced code block
+    document.addEventListener("DOMContentLoaded", function () {
+        var blocks = document.querySelectorAll(".guide-page pre");
+        blocks.forEach(function (block) {
+            var wrapper = document.createElement("div");
+            wrapper.className = "code-wrapper";
+            block.parentNode.insertBefore(wrapper, block);
+            wrapper.appendChild(block);
+
+            var button = document.createElement("button");
+            button.className = "copy-button";
+            button.type = "button";
+            button.textContent = "Copy";
+            wrapper.appendChild(button);
+
+            button.addEventListener("click", function () {
+                navigator.clipboard.writeText(block.innerText).then(function () {
+                    button.textContent = "Copied";
+                    setTimeout(function () { button.textContent = "Copy"; }, 1500);
+                }, function () {
+                    button.textContent = "Failed";
+                    setTimeout(function () { button.textContent = "Copy"; }, 1500);
+                });
+            });
+        });
+    });
+</script>
