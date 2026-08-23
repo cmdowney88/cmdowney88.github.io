@@ -99,8 +99,7 @@ with easing was removed deliberately; don't reintroduce it.
 - Course pages link up: `href="../../../main.css"`
 - CDN assets: full URLs with SRI hashes
 
-Several pages still carry absolute `https://cmdowney88.github.io` links in the instructor byline
-and one teaching entry. These resolve through GitHub's redirect but are not canonical.
+All internal links are relative — there are no absolute self-links to either domain.
 
 Relative paths throughout, because pages are sometimes opened directly by double-clicking
 (`file://`) rather than served.
