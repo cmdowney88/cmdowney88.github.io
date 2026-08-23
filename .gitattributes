@@ -1,0 +1,9 @@
+# Normalize all text files to LF in the repository and in the working tree.
+# Git auto-detects which files are text; the binary types below are marked
+# explicitly so they are never inspected or converted.
+* text=auto eol=lf
+
+# Binary assets
+*.pdf  -text
+*.png  -text
+*.zip  -text
