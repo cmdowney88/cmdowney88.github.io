@@ -1,7 +1,12 @@
 # Site Architecture
 
-Personal academic website for C.M. Downey, hosted on GitHub Pages at `cmdowney88.github.io`.
-Hand-coded HTML with Bootstrap — no static site generator, no build step.
+Personal academic website for C.M. Downey. Hand-coded HTML with Bootstrap — no static site
+generator, no build step.
+
+Served by GitHub Pages from the `cmdowney88/cmdowney88.github.io` repository, at the custom
+domain **cmdowney.io** (set by the `CNAME` file at the repo root). The old
+`cmdowney88.github.io` address still resolves, via GitHub's redirect. Prefer relative links
+internally; if an absolute URL is genuinely needed, use the custom domain.
 
 ## Design Approach
 
@@ -21,6 +26,7 @@ Hand-coded HTML with Bootstrap — no static site generator, no build step.
 
 ```
 cmdowney88.github.io/
+├── CNAME                       # custom domain for GitHub Pages (cmdowney.io)
 ├── index.html                  # homepage (single-page CV)
 ├── main.css                    # global styles, applies to every page
 ├── .gitattributes              # enforces LF line endings repo-wide
@@ -92,6 +98,9 @@ with easing was removed deliberately; don't reintroduce it.
 - Homepage links down: `href="teaching/ling282/fall26/index.html"`
 - Course pages link up: `href="../../../main.css"`
 - CDN assets: full URLs with SRI hashes
+
+Several pages still carry absolute `https://cmdowney88.github.io` links in the instructor byline
+and one teaching entry. These resolve through GitHub's redirect but are not canonical.
 
 Relative paths throughout, because pages are sometimes opened directly by double-clicking
 (`file://`) rather than served.
