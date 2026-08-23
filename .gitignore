@@ -7,6 +7,10 @@
 _site/
 .jekyll-cache/
 
+# Python
+__pycache__/
+*.pyc
+
 # LaTeX
 *.log
 *.out
