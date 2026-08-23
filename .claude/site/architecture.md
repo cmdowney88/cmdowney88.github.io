@@ -133,7 +133,4 @@ something reintroduced CRLF before committing.
 
 ## Git Workflow
 
-- Conceptually distinct changes go in separate commits
-- Commit messages: concise but informative
-- No AI co-authorship footer — commits are authored by the user
-- Never push; the user handles that
+See `.claude/git-workflow.md`.

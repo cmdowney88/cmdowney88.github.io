@@ -11,6 +11,7 @@ websites under `teaching/` and the CV build system under `cv/`.
 | Markdown guides, Jekyll layouts, local preview | `.claude/site/jekyll.md` |
 | Course page structure, schedule tables, term projects | `.claude/courses/conventions.md` |
 | A specific course's facts | `.claude/courses/<course>.md` |
+| Committing, splitting changes, line endings | `.claude/git-workflow.md` |
 | CV build, tags, website-vs-PDF differences | the `update-cv` skill |
 
 Read the relevant file when a task touches it — not preemptively. When the user names a course
