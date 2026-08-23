@@ -51,9 +51,12 @@ walkthrough appointments specific to this course. Writeup uses ACL format.
 
 ## Materials
 
-- Student-facing guides: `teaching/dscc251/<term>/docs/` — e.g. `paper-discovery-guide.pdf`
+- Student-facing guides: `teaching/dscc251/<term>/docs/` — currently `paper-discovery-guide.pdf`
   (finding papers via Semantic Scholar, criteria for good discussion papers, presentation
   requirements, paper approval workflow)
+- Cluster setup is **not** in `docs/`. It moved to the shared, cross-course guide at
+  `/guides/cluster-setup/`; the old `docs/cluster-setup.pdf` was deleted because it documented
+  the pre-BlueHive3 workflow
 - Milestone specs: `teaching/dscc251/<term>/project/`
 - Source materials: `~/CourseMaterials/dscc251/` — `slides/` (markdown sources with generated
   PDFs), `figures/` (R Markdown notebooks), `guides/` (student guide sources, PDFs copied into

@@ -59,15 +59,19 @@ Standard sequence:
 |---|---|
 | M1 | Interest survey / initial brainstorming |
 | M2 | Two informal proposals |
-| *(in class)* | Round-robin activity |
 | M3 | Abstract + completion plan — commit to one idea |
 | M4 | Progress checkpoint, with GitHub repo |
-| M5 | Final progress report *(DSCC 251 only)* |
-| *(in class)* | Peer-review workshop |
+| *(appointments)* | 30-minute code walkthrough, between M4 and M5 |
+| M5 | Final progress report |
 | — | Presentations, final class sessions |
 | — | Final writeup, finals week |
 
-DSCC 251 additionally schedules 30-minute code walkthrough appointments between M4 and M5.
+DSCC 251 and LING 282 both run the full sequence. Milestone deadlines fall on **Fridays** and are
+placed in the Events column of the preceding class row, worded "due Friday M/D".
+
+Courses also schedule an in-class workshop session where groups exchange feedback. Placement
+varies and is a per-course choice — DSCC 251 puts a peer-review workshop immediately before M3;
+LING 282 Fall 2026 puts one before the final writeup. Do not assume a course has one, or where.
 
 Final deliverables: presentation, GitHub repository, and a writeup in the style of a scientific
 research paper. Students may pivot direction between milestones; the syllabi state this

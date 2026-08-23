@@ -11,12 +11,12 @@ Monday and Wednesday, 10:25–11:40 AM, Lattimore 513. Instructor office: Lattim
 
 ## Grading
 
-- 40% Homework assignments
-- 30% Term project
+- 40% Term project
+- 30% Homework assignments
 - 20% In-class quizzes
 - 10% Attendance / participation
 
-Four absences allowed without penalty. Quizzes are held at the start of most Mondays (or
+Two absences allowed without penalty. Quizzes are held at the start of most Mondays (or
 Wednesday when Monday is a holiday) and are curved upward to an 85% median, separately for the
 undergraduate and graduate sections, capped at 100%.
 
@@ -62,9 +62,15 @@ Course work runs on UR's BlueHive computing cluster.
 
 ## Term Project
 
-Assigned groups; scientifically-oriented, going beyond engineering a model to solve an NLP task.
-Minimally involves training or fine-tuning a neural model of language. Milestones follow the
-standard M1–M4 sequence in `conventions.md`.
+Groups are highly encouraged but not required; suggested groupings are announced after M1, but
+formation is up to students, and an individual project is held to the same quality standard.
+Scientifically-oriented, going beyond engineering a model to solve an NLP task — the model is an
+instrument for answering a question about language, not the deliverable. Minimally involves
+training or fine-tuning a neural model of language.
+
+Milestones follow the full M1–M5 sequence in `conventions.md`, including the code walkthrough.
+Milestone specs live in `teaching/ling282/<term>/project/`; as of Fall 2026 the overview and the
+M1/M2 specs exist, with M3–M5, presentation, and writeup released during the semester.
 
 ## Materials
 
