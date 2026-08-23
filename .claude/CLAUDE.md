@@ -20,6 +20,8 @@ to work on.
 ## Skills
 
 - `new-course-page` — port a course site to a new semester
+- `edit-schedule` — restructure an existing schedule: cancel a session, add or drop an activity,
+  shift content, move a deadline
 - `publish-slides` — link newly exported slide PDFs in a course schedule
 - `update-cv` — rebuild the CV and sync outward after editing `cv/cv_data.yaml`
 
