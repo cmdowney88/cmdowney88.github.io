@@ -1,5 +1,7 @@
 .DS_Store
-.claude
+
+# Claude Code project context is tracked; local permission state is not
+.claude/settings.local.json
 
 # Jekyll
 _site/

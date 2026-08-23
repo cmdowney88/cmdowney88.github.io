@@ -1,0 +1,75 @@
+# LING 282/482: Deep Learning in Computational Linguistics
+
+Cross-listed undergrad/grad, Linguistics. Taught in fall semesters.
+
+**Current offering**: Fall 2026 — `teaching/ling282/fall26/index.html`
+**Prior offerings**: `fall25/`, `fall24/`
+
+## Meeting
+
+Monday and Wednesday, 10:25–11:40 AM, Lattimore 513. Instructor office: Lattimore 507.
+
+## Grading
+
+- 40% Homework assignments
+- 30% Term project
+- 20% In-class quizzes
+- 10% Attendance / participation
+
+Four absences allowed without penalty. Quizzes are held at the start of most Mondays (or
+Wednesday when Monday is a holiday) and are curved upward to an 85% median, separately for the
+undergraduate and graduate sections, capped at 100%.
+
+Homework is released Wednesdays and due 11pm the following Wednesday, via Blackboard. Late
+penalties: 5% within 1 hour, 10% within 24 hours, 20% within 48 hours, ungraded after that.
+
+## Textbook
+
+Jurafsky and Martin, *Speech and Language Processing* (3rd ed.), abbreviated JM in the schedule:
+https://web.stanford.edu/~jurafsky/slp3/ — chapters linked per-session as `<N>.pdf`.
+
+## Prerequisites
+
+One semester of calculus (differentiation), Python programming, Linux/Unix commands.
+
+## Topic Sequence
+
+Roughly 25 content sessions, in this order:
+
+1. Introduction, deep learning history
+2. Vectors and linear transformations
+3. The perceptron
+4. Supervised learning, gradient descent
+5. Computation graphs, backpropagation
+6. Word vectors, word2vec
+7. Language modeling, n-grams
+8. BlueHive cluster
+9. PyTorch; feed-forward language models
+10. Recurrent neural networks
+11. Vanishing gradients, RNN variants (LSTM/GRU)
+12. Sampling and generation
+13. Sequence-to-sequence, attention
+14-15. Transformers
+16-17. Pre-training and fine-tuning
+18. Text tokenization
+19. Multilingual language models
+20-21. Large language models
+22. Speech data and acoustics
+23. Neural networks for speech
+24-25. Project presentations
+
+Course work runs on UR's BlueHive computing cluster.
+
+## Term Project
+
+Assigned groups; scientifically-oriented, going beyond engineering a model to solve an NLP task.
+Minimally involves training or fine-tuning a neural model of language. Milestones follow the
+standard M1–M4 sequence in `conventions.md`.
+
+## Materials
+
+- Homework and quiz sources: `~/CourseMaterials/ling482/` (`hw/`, `latex/`, `quizzes/`,
+  `legacy_hw/`)
+- Lesson plans: `~/Obsidian/Teaching/ling282/`
+- Slide decks are authored in Keynote outside the repo; the exported PDFs are committed to
+  `teaching/ling282/<term>/slides/` as they are released
