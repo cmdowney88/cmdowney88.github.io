@@ -1,7 +1,8 @@
 # Site Architecture
 
-Personal academic website for C.M. Downey. Hand-coded HTML with Bootstrap — no static site
-generator, no build step.
+Personal academic website for C.M. Downey. Almost entirely hand-coded HTML with Bootstrap. A
+thin Jekyll layer renders the blog and the Markdown guides under `guides/`; everything else is
+static HTML with no build step. See `site/jekyll.md` for that layer.
 
 Served by GitHub Pages from the `cmdowney88/cmdowney88.github.io` repository, at the custom
 domain **cmdowney.io** (set by the `CNAME` file at the repo root). The old
@@ -32,7 +33,10 @@ cmdowney88.github.io/
 ├── .gitattributes              # enforces LF line endings repo-wide
 ├── cv/                         # CV source and build (see the update-cv skill)
 ├── blog/
-├── _layouts/                   # Jekyll layouts (blog only)
+├── guides/                     # Markdown guides rendered by Jekyll (see site/jekyll.md)
+├── _config.yml                 # Jekyll config
+├── Gemfile                     # local preview only; GitHub Pages ignores it
+├── _layouts/                   # Jekyll layouts: default, post, guide
 └── teaching/
     ├── index.html              # complete course listing
     ├── dscc251/spring26/
@@ -53,6 +57,9 @@ Policies, Schedule. Fixed navbar carrying the course title, "Home" link back to 
 
 **Course listing** (`teaching/index.html`) — minimal directory of every course site ever taught,
 grouped by institution (UR, then UW), courses alphabetical by code, semesters newest-first.
+
+**Guides** (`guides/*.md`) — long-form reference documents shared across courses and the lab,
+authored in Markdown and rendered by Jekyll. See `site/jekyll.md`.
 
 ## Navigation
 
@@ -101,8 +108,9 @@ with easing was removed deliberately; don't reintroduce it.
 
 All internal links are relative — there are no absolute self-links to either domain.
 
-Relative paths throughout, because pages are sometimes opened directly by double-clicking
-(`file://`) rather than served.
+Relative paths throughout, because HTML pages are sometimes opened directly by double-clicking
+(`file://`) rather than served. **Jekyll-rendered pages are the exception** — they only exist
+once built, so `guides/*.md` and anything linking *to* a guide's permalink require a served site.
 
 ## Line Endings
 
@@ -116,8 +124,10 @@ something reintroduced CRLF before committing.
    do use `bg-light` on the Policies section; that is intentional and separate.)
 2. **No web fonts** — system/Bootstrap defaults preferred.
 3. **No SEO/social meta tags** — considered and declined as low value.
-4. **Don't push static site generators.** Migrating to Jekyll is open for the future but on
-   hold; raise it only if asked.
+4. **Don't convert the hand-coded pages to Jekyll.** The homepage and the course pages are
+   hand-written HTML and stay that way. Jekyll exists here to render Markdown content that is
+   genuinely authored in Markdown (the blog, the guides), and new Markdown content may use it —
+   but that is not a reason to migrate the existing HTML. Don't propose it.
 5. **Keep the yellow accent out** — reserved for the lab site.
 6. **Never use `id` for repeated elements.**
 

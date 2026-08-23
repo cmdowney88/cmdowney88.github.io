@@ -8,6 +8,7 @@ websites under `teaching/` and the CV build system under `cv/`.
 | Need | Read |
 |---|---|
 | HTML/CSS conventions, colors, paths, what not to change | `.claude/site/architecture.md` |
+| Markdown guides, Jekyll layouts, local preview | `.claude/site/jekyll.md` |
 | Course page structure, schedule tables, term projects | `.claude/courses/conventions.md` |
 | A specific course's facts | `.claude/courses/<course>.md` |
 | CV build, tags, website-vs-PDF differences | the `update-cv` skill |
