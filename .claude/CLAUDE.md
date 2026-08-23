@@ -38,6 +38,12 @@ to work on.
   notes including pedagogical rationale. Private, synced via Obsidian, **not** git-tracked.
   Course design notes live at `~/Obsidian/Teaching/<course>/design-notes.md`.
 
-Note that `.claude/` is committed to a public repository. Keep pedagogy, student information,
-enrollment figures, teaching self-assessments, and unapproved departmental business in the
-Obsidian vault instead.
+Note that `.claude/` is committed to a public repository. Keep student information, enrollment
+figures, teaching self-assessments, and unapproved departmental business in the Obsidian vault
+instead.
+
+On pedagogy, the line is **audience**, not subject matter. Explaining to students why an
+assignment is structured the way it is belongs in the student-facing material — it is part of the
+assignment, and course pages and project specs should say it plainly. What stays private is
+self-addressed deliberation: weighing how to teach something, what worked last time, what to
+change. That goes in `design-notes.md` in the vault, never in this repo.
