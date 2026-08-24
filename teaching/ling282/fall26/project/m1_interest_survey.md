@@ -7,7 +7,7 @@ permalink: /teaching/ling282/fall26/project/m1/
 
 **Due:** Friday, September 18, 2026
 
-**Submit via:** Google Form (link on course website)
+**Submit via:** Google Form (link on Blackboard)
 
 This survey helps me understand your interests and background so I can provide better guidance on
 your term project. Working in a group is highly encouraged but not required, and your responses to

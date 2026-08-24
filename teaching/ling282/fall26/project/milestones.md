@@ -47,7 +47,7 @@ All computational work for the project can be run on UR's BlueHive cluster.
 
 ## M1: Interest Survey (Due Friday, Sep 18)
 
-Submit via the course form. See [full requirements](../m1/).
+Submit via the Google Form linked on Blackboard. See [full requirements](../m1/).
 
 The survey collects your topic interests, your background in programming and in linguistics, and
 your preferences about groupmates. Your responses are what I use to announce suggested groupings
