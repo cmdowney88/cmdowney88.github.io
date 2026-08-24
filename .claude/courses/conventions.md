@@ -25,13 +25,16 @@ Two different strings, two different formats:
 ```
 
 - **`<title>`** — course number, then the term with a **full year** in parentheses. No
-  institution prefix. (`teaching/uw_574` keeps its `UW` prefix: it is the one non-UR course, and
-  the prefix is what distinguishes its `LING 574` from the UR LING courses.)
+  institution prefix: **UR is the unmarked case** while the instructor is employed there.
+  `teaching/uw_574` therefore keeps its `UW` prefix — it is the one non-UR course, and the prefix
+  is what distinguishes its `LING 574` from the UR LING courses. If the instructor moves
+  institutions, that convention would be revisited; until then, don't add `UR` anywhere.
 - **`navbar-brand`** — course number, colon, full course name, then the term with an
   **abbreviated year** in parentheses: `(Fall '26)`, not `(Fall 2026)`.
 
-Both were inconsistent across offerings until Fall 2026 and were normalised retroactively. Two
-archived pages keep square brackets (`[Fall '24]`, `[Spr '23]`) rather than parentheses.
+Both were inconsistent across offerings and were normalised retroactively. `teaching/uw_574` is
+the only page still using square brackets (`[Spr '23]`); it is archived and non-UR, so it is left
+as-is.
 
 ## Schedule Table
 

@@ -47,6 +47,16 @@ the linguistic data formats from the first half.
 **Term project** — open-ended research project investigating a linguistic question with data;
 individual or pairs. Milestones follow the standard sequence in `conventions.md`.
 
+## Homework Format
+
+Homework lives in `teaching/ling250/<term>/hw/` as **raw Markdown** (`hw1.md`, …), linked
+directly from the schedule and served as plain text.
+
+**Do not convert these to Jekyll guide pages.** Unlike the milestone specs, these are templates
+students download and type their answers into — the Markdown file *is* the artifact they submit.
+Rendering them to HTML would defeat that. This is a deliberate exception to the "Markdown with
+front matter becomes a page" pattern in `.claude/site/jekyll.md`.
+
 ## Materials
 
 - Public student repo: `~/CourseMaterials/ling250-materials/` →
