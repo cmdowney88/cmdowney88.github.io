@@ -15,6 +15,24 @@ teaching/<course>/<term>/
 
 Term directories are named `fall26`, `spring26` — lowercase season plus two-digit year.
 
+## Page Title and Navbar Brand
+
+Two different strings, two different formats:
+
+```html
+<title>LING 282/482 (Fall 2026)</title>
+<a class="navbar-brand" href="#page-top">LING 282/482: Deep Learning in Computational Linguistics (Fall '26)</a>
+```
+
+- **`<title>`** — course number, then the term with a **full year** in parentheses. No
+  institution prefix. (`teaching/uw_574` keeps its `UW` prefix: it is the one non-UR course, and
+  the prefix is what distinguishes its `LING 574` from the UR LING courses.)
+- **`navbar-brand`** — course number, colon, full course name, then the term with an
+  **abbreviated year** in parentheses: `(Fall '26)`, not `(Fall 2026)`.
+
+Both were inconsistent across offerings until Fall 2026 and were normalised retroactively. Two
+archived pages keep square brackets (`[Fall '24]`, `[Spr '23]`) rather than parentheses.
+
 ## Schedule Table
 
 The schedule is the **last** `<tbody>` in the file; earlier tables hold meeting times and
