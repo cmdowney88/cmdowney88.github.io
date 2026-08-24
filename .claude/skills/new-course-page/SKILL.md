@@ -72,6 +72,11 @@ Term directories are named `fall26`, `spring26` — lowercase season plus two-di
 
 6. **Update the prose sections.**
    - Year strings in `<title>` and the `navbar-brand`.
+   - **Leave the navbar's colour alone.** Each course has its own (see the per-course table in
+     `.claude/site/architecture.md`), carried on the `<nav>` as an inline
+     `style="background-color: …"`, sometimes with a `--nav-ink-muted` override and
+     `navbar-light` instead of `navbar-dark`. Copying the source page brings all of that with
+     it, which is correct. Don't normalise it to navy or to a `bg-*` class.
    - **The daylight saving date in the Late Work section**, if present. It is the first Sunday
      in November and changes every year. This is easy to miss because the surrounding sentence
      reads fine with the wrong date.

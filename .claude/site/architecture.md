@@ -73,13 +73,75 @@ UR brand colors — source: https://brand.rochester.edu/visual-identity/color-sy
 
 | Use | Value |
 |---|---|
-| Navbar background | `#00205b` |
+| Navbar background (site-wide) | `#00205b` |
 | Links | `#0066FD` (Arpeggio Azure) |
 | Link hover | `#003EFF` (Quantum Cobalt) |
 | Body text | `#646464` |
 
-The yellow UR accent is deliberately unused here — reserved for visual differentiation of the
-separate UR2NLP lab site (`ur2nlp.github.io`, a different repo; do not conflate the two).
+`#00205b` is the *pre-rebrand* official navy. UR's current primary is `#001E5F`; the two are
+indistinguishable in practice and the old value is kept deliberately. Don't "correct" it.
+
+### Per-course navbar colors
+
+Each course site carries its own navbar color for visual identity. The homepage,
+`teaching/index.html`, and the guide layout stay navy — they are not any one course.
+
+| Course | Color | Text | Resting link |
+|---|---|---|---|
+| LING 282/482 | `#00205b` navy | white (`navbar-dark`) | n/a (`navbar-dark`) |
+| DSCC 251/451 | `#66A2FF` Connective Cornflower | navy (`navbar-light`) | `#123166` |
+| LING 250/450 | `#FFE95F` Bright Lemon | navy (`navbar-light`) | `#2C4B85` (default) |
+
+Set as an inline `style="background-color: …"` on the `<nav>`, never a Bootstrap `bg-*` class.
+
+**A course's color applies to its archived offerings too**, so every term of a course looks like
+that course. `ling250/spring25` and `ling282/fall24` were updated retroactively for this reason.
+The only page still on Bootstrap's `bg-dark` is `uw_574`, a UW course that should not take UR
+colors at all — leave it.
+
+#### Choosing one
+
+1. Pick from the UR system above. Check contrast against **white**.
+2. **≥ 4.5:1** — keep `navbar-dark`. Nothing else to do; Bootstrap's white text is fine.
+3. **< 4.5:1** — switch that `<nav>` to `navbar-light`. Bootstrap would then render near-black
+   text, so `main.css` pins it to UR navy for `body.course-page .navbar-light`.
+4. For a `navbar-light` bar, check `#2C4B85` (the default resting-link tint) against the new
+   background. If it misses 4.5:1, darken it and set `--nav-ink-muted` inline next to
+   `background-color`. Two custom properties drive the whole block: `--nav-ink` (brand,
+   hover, scrollspy-active) and `--nav-ink-muted` (resting links, toggler).
+5. Update the table above.
+
+```python
+def contrast(a, b):
+    def lum(h):
+        h = h.lstrip("#")
+        c = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+        c = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in c]
+        return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+    hi, lo = max(lum(a), lum(b)), min(lum(a), lum(b))
+    return (hi + 0.05) / (lo + 0.05)
+```
+
+#### Two traps
+
+**Use solid navy tints, never navy at reduced alpha.** Translucent navy composites toward
+whatever is behind it, and over a yellow navbar that lands on olive — `#00205b` at 65% over
+`#FFD82B` is `#59604a`, which is not a navy at all. This applies to the toggler border and the
+icon's SVG stroke too. The icon's stroke is baked into a data URI and cannot read a custom
+property; it stays at the default tint, which is acceptable because a non-text UI component
+needs only 3:1.
+
+**A light or blue bar collapses the muted/active distinction, and that was accepted.** The
+resting link must clear 4.5:1 against the bar, so the lighter the bar, the darker that tint has
+to be — until it is indistinguishable from the brand. On Cornflower the usable tint is `#123166`,
+only 1.22:1 from the `#00205b` brand, so brand, nav links, and the active-section highlight all
+read as roughly one navy. **This is a known, accepted trade-off of choosing Cornflower, not a
+bug.** Do not "fix" it by lightening the tint — that breaks contrast. The only real fix is a
+darker bar.
+
+The yellow UR accent was formerly reserved entirely for the UR2NLP lab site (`ur2nlp.github.io`,
+a different repo; do not conflate the two). LING 250's Bright Lemon navbar now also uses it,
+which was a deliberate call. It stays off the homepage.
 
 ## CSS Conventions
 
@@ -128,7 +190,8 @@ something reintroduced CRLF before committing.
    hand-written HTML and stay that way. Jekyll exists here to render Markdown content that is
    genuinely authored in Markdown (the blog, the guides), and new Markdown content may use it —
    but that is not a reason to migrate the existing HTML. Don't propose it.
-5. **Keep the yellow accent out** — reserved for the lab site.
+5. **Keep the yellow accent off the homepage** — it is LING 250's navbar color and the lab
+   site's differentiator, not a general accent for this site.
 6. **Never use `id` for repeated elements.**
 
 ## Git Workflow
