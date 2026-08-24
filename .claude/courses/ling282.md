@@ -17,11 +17,12 @@ Monday and Wednesday, 10:25–11:40 AM, Lattimore 513. Instructor office: Lattim
 - 10% Attendance / participation
 
 Two absences allowed without penalty. Quizzes are held at the start of most Mondays (or
-Wednesday when Monday is a holiday) and are curved upward to an 85% median, separately for the
-undergraduate and graduate sections, capped at 100%.
+Wednesday when Monday is a holiday) and are curved upward to an 85% median across the whole
+class, capped at 100%.
 
-Homework is released Wednesdays and due 11pm the following Wednesday, via Blackboard. Late
-penalties: 5% within 1 hour, 10% within 24 hours, 20% within 48 hours, ungraded after that.
+3-4 homeworks. Homework is released Wednesdays and due 11pm the following Wednesday, via
+Blackboard. Late penalties: 5% within 1 hour, 10% within 24 hours, 20% within 48 hours, ungraded
+after that.
 
 ## Textbook
 
