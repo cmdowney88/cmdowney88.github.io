@@ -1,4 +1,9 @@
-# Project Milestone 3: Abstract + Completion Plan
+---
+layout: guide
+title: Abstract + Completion Plan (M3)
+subtitle: LING 250/450, Spring 2026
+permalink: /teaching/ling250/spring26/project/m3/
+---
 
 **Due: March 20 (submit PDF on Blackboard)**
 

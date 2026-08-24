@@ -1,4 +1,9 @@
-# Project Milestone 4: Progress Checkpoint
+---
+layout: guide
+title: Progress Checkpoint (M4)
+subtitle: LING 250/450, Spring 2026
+permalink: /teaching/ling250/spring26/project/m4/
+---
 
 **Due: April 3 (submit PDF on Blackboard)**
 

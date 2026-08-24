@@ -1,4 +1,9 @@
-# Term Project: Final Writeup
+---
+layout: guide
+title: Final Writeup
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/writeup/
+---
 
 **Due: May 11, 11:00pm (submit PDF on Blackboard)**
 

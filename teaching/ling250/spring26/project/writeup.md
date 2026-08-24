@@ -1,4 +1,9 @@
-# Term Project: Final Writeup
+---
+layout: guide
+title: Final Writeup
+subtitle: LING 250/450, Spring 2026
+permalink: /teaching/ling250/spring26/project/writeup/
+---
 
 **Due: May 11, 11:00pm (submit PDF on Blackboard)**
 

@@ -1,4 +1,9 @@
-# Project Milestone 3: Abstract + Completion Plan
+---
+layout: guide
+title: Abstract + Completion Plan (M3)
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/m3/
+---
 
 **Due: March 6 (submit PDF on Blackboard)**
 

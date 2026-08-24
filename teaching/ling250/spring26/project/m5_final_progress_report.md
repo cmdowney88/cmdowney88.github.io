@@ -1,4 +1,9 @@
-# Project Milestone 5: Final Progress Report
+---
+layout: guide
+title: Final Progress Report (M5)
+subtitle: LING 250/450, Spring 2026
+permalink: /teaching/ling250/spring26/project/m5/
+---
 
 **Due: April 24 (submit PDF on Blackboard)**
 

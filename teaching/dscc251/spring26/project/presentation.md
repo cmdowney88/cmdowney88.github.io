@@ -1,4 +1,9 @@
-# Project Presentations
+---
+layout: guide
+title: Project Presentations
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/presentation/
+---
 
 **Dates: April 28–30 (schedule TBD)**
 

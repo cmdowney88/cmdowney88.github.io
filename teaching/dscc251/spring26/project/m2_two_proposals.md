@@ -1,4 +1,9 @@
-# Project Milestone 2: Two Proposals
+---
+layout: guide
+title: Two Proposals (M2)
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/m2/
+---
 
 **Due: February 24 (submit PDF on Blackboard)**
 

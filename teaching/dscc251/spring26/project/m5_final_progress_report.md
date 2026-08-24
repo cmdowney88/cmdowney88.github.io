@@ -1,4 +1,9 @@
-# Project Milestone 5: Final Progress Report
+---
+layout: guide
+title: Final Progress Report (M5)
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/m5/
+---
 
 **Due: April 24 (submit PDF on Blackboard)**
 

@@ -96,10 +96,23 @@ research paper. Students may pivot direction between milestones; the syllabi sta
 explicitly.
 
 Milestone specs live in `teaching/<course>/<term>/project/`, linked from the schedule's Events
-column. LING 282 Fall 2026 renders them through the Jekyll `guide` layout (see
-`.claude/site/jekyll.md`): Markdown with front matter, an explicit `permalink` of
-`/teaching/<course>/<term>/project/<m1|m2|overview>/`, and the title in front matter rather than
-an H1 in the body. Link to them by permalink (`project/m1/`), not by filename.
+column. **All milestone specs are Jekyll guide pages** (see `.claude/site/jekyll.md`): Markdown
+with front matter, the title in front matter rather than an H1 in the body, and an explicit
+`permalink`. Link to them by permalink (`project/m1/`), never by filename.
+
+Permalinks are `/teaching/<course>/<term>/project/<slug>/`, with these slugs:
+
+| File | Slug |
+|---|---|
+| `milestones.md` | `overview` |
+| `m1_interest_survey.md` … `m5_final_progress_report.md` | `m1` … `m5` |
+| `code_walkthrough.md` | `code-walkthrough` |
+| `presentation.md` | `presentation` |
+| `writeup.md` | `writeup` |
+
+The filenames stay descriptive; only the URLs are short. Titles drop the course prefix, since the
+`subtitle` carries it (`DSCC 251/451, Spring 2026`). The overview page gets a `{:toc}`; the
+individual specs do not.
 
 ## GenAI Policy
 

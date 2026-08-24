@@ -1,4 +1,9 @@
-# Project Milestone 2: Two Proposals
+---
+layout: guide
+title: Two Proposals (M2)
+subtitle: LING 250/450, Spring 2026
+permalink: /teaching/ling250/spring26/project/m2/
+---
 
 **Due: March 4 (submit PDF on Blackboard)**
 

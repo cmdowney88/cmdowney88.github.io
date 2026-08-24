@@ -1,4 +1,9 @@
-# Project Presentations
+---
+layout: guide
+title: Project Presentations
+subtitle: LING 250/450, Spring 2026
+permalink: /teaching/ling250/spring26/project/presentation/
+---
 
 **Dates: April 27–29 (schedule posted on Blackboard)**
 

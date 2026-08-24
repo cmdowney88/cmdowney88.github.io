@@ -1,4 +1,9 @@
-# Project Milestone 4: Progress Report + GitHub Repo
+---
+layout: guide
+title: Progress Report + GitHub Repo (M4)
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/m4/
+---
 
 **Due: April 3 (submit PDF on Blackboard)**
 

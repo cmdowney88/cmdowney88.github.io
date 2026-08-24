@@ -1,4 +1,9 @@
-# Code Walkthrough
+---
+layout: guide
+title: Code Walkthrough
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/code-walkthrough/
+---
 
 **When: Week of April 21 — email me to schedule a 30-minute slot**
 

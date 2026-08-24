@@ -1,4 +1,9 @@
-# DSCC/LING 251/451: Project Interest Survey (M1)
+---
+layout: guide
+title: Project Interest Survey (M1)
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/m1/
+---
 
 **Due:** February 3, 2026
 **Submit via:** Google Form (link on course website)

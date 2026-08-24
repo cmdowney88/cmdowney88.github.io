@@ -1,6 +1,14 @@
-# DSCC/LING 251/451: Term Project Milestones
+---
+layout: guide
+title: Term Project Milestones
+subtitle: DSCC 251/451, Spring 2026
+permalink: /teaching/dscc251/spring26/project/overview/
+---
 
 This document describes the requirements for each project milestone throughout the semester.
+
+* placeholder
+{:toc}
 
 ---
 
@@ -83,7 +91,7 @@ Use this milestone to request any specific guidance you think would help. I can 
 
 ## M4: Progress Report + GitHub Repo (Due Apr 3)
 
-See [full requirements](m4_progress_report.md).
+See [full requirements](../m4/).
 
 ### Progress Report (PDF)
 
