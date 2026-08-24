@@ -78,7 +78,10 @@ research paper. Students may pivot direction between milestones; the syllabi sta
 explicitly.
 
 Milestone specs live in `teaching/<course>/<term>/project/`, linked from the schedule's Events
-column.
+column. LING 282 Fall 2026 renders them through the Jekyll `guide` layout (see
+`.claude/site/jekyll.md`): Markdown with front matter, an explicit `permalink` of
+`/teaching/<course>/<term>/project/<m1|m2|overview>/`, and the title in front matter rather than
+an H1 in the body. Link to them by permalink (`project/m1/`), not by filename.
 
 ## GenAI Policy
 

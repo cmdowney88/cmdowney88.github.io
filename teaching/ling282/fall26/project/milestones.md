@@ -1,6 +1,14 @@
-# LING 282/482: Term Project Milestones
+---
+layout: guide
+title: Term Project Milestones
+subtitle: LING 282/482, Fall 2026
+permalink: /teaching/ling282/fall26/project/overview/
+---
 
 This document describes the requirements for each project milestone throughout the semester.
+
+* placeholder
+{:toc}
 
 ## What the project is
 
@@ -39,7 +47,7 @@ All computational work for the project can be run on UR's BlueHive cluster.
 
 ## M1: Interest Survey (Due Friday, Sep 18)
 
-Submit via the course form. See [full requirements](m1_interest_survey.md).
+Submit via the course form. See [full requirements](../m1/).
 
 The survey collects your topic interests, your background in programming and in linguistics, and
 your preferences about groupmates. Your responses are what I use to announce suggested groupings
@@ -49,7 +57,7 @@ after this milestone.
 
 ## M2: Two Proposals (Due Friday, Oct 2)
 
-Submit a PDF on Blackboard. See [full requirements](m2_two_proposals.md).
+Submit a PDF on Blackboard. See [full requirements](../m2/).
 
 Two proposals, 1-2 paragraphs each, covering:
 

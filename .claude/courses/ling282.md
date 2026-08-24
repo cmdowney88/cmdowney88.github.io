@@ -70,7 +70,8 @@ instrument for answering a question about language, not the deliverable. Minimal
 training or fine-tuning a neural model of language.
 
 Milestones follow the full M1–M5 sequence in `conventions.md`, including the code walkthrough.
-Milestone specs live in `teaching/ling282/<term>/project/`; as of Fall 2026 the overview and the
+There is no peer-review workshop session. Milestone specs live in
+`teaching/ling282/<term>/project/` as Jekyll guide pages; as of Fall 2026 the overview and the
 M1/M2 specs exist, with M3–M5, presentation, and writeup released during the semester.
 
 ## Materials

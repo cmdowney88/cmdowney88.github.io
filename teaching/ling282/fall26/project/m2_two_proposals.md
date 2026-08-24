@@ -1,4 +1,9 @@
-# Project Milestone 2: Two Proposals
+---
+layout: guide
+title: Two Proposals (M2)
+subtitle: LING 282/482, Fall 2026
+permalink: /teaching/ling282/fall26/project/m2/
+---
 
 **Due: Friday, October 2 (submit PDF on Blackboard)**
 

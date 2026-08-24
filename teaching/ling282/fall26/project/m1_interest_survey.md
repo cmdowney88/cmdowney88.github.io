@@ -1,6 +1,12 @@
-# LING 282/482: Project Interest Survey (M1)
+---
+layout: guide
+title: Project Interest Survey (M1)
+subtitle: LING 282/482, Fall 2026
+permalink: /teaching/ling282/fall26/project/m1/
+---
 
 **Due:** Friday, September 18, 2026
+
 **Submit via:** Google Form (link on course website)
 
 This survey helps me understand your interests and background so I can provide better guidance on
