@@ -69,9 +69,9 @@ Standard sequence:
 DSCC 251 and LING 282 both run the full sequence. Milestone deadlines fall on **Fridays** and are
 placed in the Events column of the preceding class row, worded "due Friday M/D".
 
-Courses also schedule an in-class workshop session where groups exchange feedback. Placement
-varies and is a per-course choice — DSCC 251 puts a peer-review workshop immediately before M3;
-LING 282 Fall 2026 puts one before the final writeup. Do not assume a course has one, or where.
+Some courses schedule an in-class workshop session where groups exchange feedback. Whether there
+is one, and where it falls, is a per-course choice — DSCC 251 puts a peer-review workshop
+immediately before M3; LING 282 has none. Do not assume a course has one, or where.
 
 Final deliverables: presentation, GitHub repository, and a writeup in the style of a scientific
 research paper. Students may pivot direction between milestones; the syllabi state this

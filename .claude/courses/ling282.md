@@ -53,10 +53,10 @@ Roughly 25 content sessions, in this order:
 16-17. Pre-training and fine-tuning
 18. Text tokenization
 19. Multilingual language models
-20-21. Large language models
-22. Speech data and acoustics
-23. Neural networks for speech
-24-25. Project presentations
+20-22. Large language models
+23. Speech data and acoustics
+24. Neural networks for speech
+25-27. Project presentations
 
 Course work runs on UR's BlueHive computing cluster.
 

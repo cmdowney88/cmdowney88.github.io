@@ -156,13 +156,6 @@ aspect finished for the presentation, but you must have intermediate results to 
 
 ---
 
-## In-class peer-review workshop (Dec 2)
-
-A class session in which you exchange drafts and give each other feedback ahead of the
-presentations and final writeup.
-
----
-
 ## Presentations (Dec 7, 9, and 14)
 
 Each project is presented to the class, followed by questions. Presentation length depends on how
