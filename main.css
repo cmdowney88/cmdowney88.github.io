@@ -49,6 +49,51 @@ body.course-page section:first-of-type {
     padding-top: 80px;
 }
 
+/* Light navbars (a course whose brand color is too pale for white text, e.g. LING 250's
+   Dandelion Yellow). Bootstrap's navbar-light defaults to near-black; pin it to UR navy
+   instead.
+
+   Every value here is a solid navy tint, never navy at reduced alpha: translucent navy
+   composites toward the color behind it, and over a yellow bar that lands on olive
+   (#00205b at 65% over #FFD82B gives #59604a).
+
+   The resting-link tint is a custom property because how dark it must be depends on the
+   bar. The #2C4B85 default is 6.16:1 on Dandelion; on a lighter or bluer bar it needs
+   darkening, which the page sets inline alongside its background-color. */
+body.course-page .navbar-light {
+    --nav-ink: #00205b;
+    --nav-ink-muted: #2C4B85;
+}
+
+body.course-page .navbar-light .navbar-brand {
+    color: var(--nav-ink);
+}
+
+body.course-page .navbar-light .navbar-nav .nav-link {
+    color: var(--nav-ink-muted);
+}
+
+body.course-page .navbar-light .navbar-nav .nav-link:hover,
+body.course-page .navbar-light .navbar-nav .nav-link:focus,
+body.course-page .navbar-light .navbar-nav .active > .nav-link,
+body.course-page .navbar-light .navbar-nav .nav-link.active,
+body.course-page .navbar-light .navbar-nav .nav-link.show,
+body.course-page .navbar-light .navbar-nav .show > .nav-link {
+    color: var(--nav-ink);
+}
+
+body.course-page .navbar-light .navbar-toggler {
+    color: var(--nav-ink-muted);
+    border-color: var(--nav-ink-muted);
+}
+
+/* The icon's stroke is baked into the data URI and cannot read a custom property. Left at
+   the default tint: as a non-text UI component it needs 3:1, not 4.5:1, which it clears on
+   every bar in use. */
+body.course-page .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%232C4B85' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* ------------------------------------------------------------------ */
 /* Guide pages (rendered from Markdown via the `guide` layout)          */
 /* ------------------------------------------------------------------ */
