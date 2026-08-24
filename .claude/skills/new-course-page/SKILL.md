@@ -133,6 +133,28 @@ If the course uses milestone-based term projects, see `.claude/courses/conventio
 shared milestone sequence. Spread the milestones across the new calendar rather than copying the
 prior year's spacing, and put the due dates in the schedule's Events column.
 
+Milestone specs are authored fresh per term and released as the semester progresses — step 5's
+"copy nothing else" covers them. But the obvious way to write a new term's M1 is to copy the
+prior term's and edit it, and where those specs are **Jekyll guide pages** (LING 282 from Fall
+2026 on) that carries a term-specific absolute `permalink`:
+
+```yaml
+permalink: /teaching/ling282/fall26/project/m1/
+```
+
+**Rewrite the permalink to the new term, or the new page silently replaces the old one at the
+old term's URL.** Jekyll emits no warning on a duplicate permalink — the build succeeds, and the
+later file wins. The prior term's published spec is simply gone, replaced by next year's content
+at last year's address. This is verified behavior, not a theoretical risk.
+
+Also update the `title`/`subtitle` if they name the term, and the due dates in the body.
+
+Check for collisions across the whole site:
+
+```bash
+grep -rh '^permalink:' teaching --include='*.md' | sort | uniq -d   # must print nothing
+```
+
 ## Reference
 
 - Schedule tables are 4 columns: Date, Topics, Readings, Events.

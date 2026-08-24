@@ -1,10 +1,17 @@
 # The Jekyll Layer
 
-Most of this site is hand-coded HTML served as-is. A thin Jekyll layer renders the two kinds of
-content that are genuinely authored in Markdown:
+Most of this site is hand-coded HTML served as-is. A thin Jekyll layer renders the content that is
+genuinely authored in Markdown:
 
 - `blog/` and `_posts/` — the blog (currently empty, but live)
 - `guides/*.md` — long-form reference documents shared across courses and the lab
+- course documents under `teaching/` — e.g. the LING 282 term-project milestone specs in
+  `teaching/ling282/fall26/project/`, which use the same `guide` layout
+
+The rule is general: **any `.md` file with front matter, anywhere not excluded by `_config.yml`,
+is rendered as a page.** Nothing about this is scoped to `guides/`. A `.md` file *without* front
+matter is copied through verbatim and served as raw text — which is what the milestone specs did
+before they were converted.
 
 GitHub Pages builds this automatically. **Do not migrate the hand-coded HTML pages into it** —
 see the rule in `architecture.md`.
@@ -37,6 +44,10 @@ is `../../../guides/cluster-setup/`.
 small script that injects a **Copy** button into every `<pre>`. Styles live in `main.css`, all
 scoped under `body.guide-page`.
 
+Because the layout renders `title` as the page's `<h1>`, **the body must not open with one** or
+it appears twice. When converting an existing Markdown document into a guide page, move its
+`# Heading` up into the front matter `title` rather than leaving it in place.
+
 ### Table of Contents
 
 Kramdown generates it server-side. Put this in the Markdown where the TOC should appear:
@@ -67,7 +78,7 @@ Body text, **with Markdown parsed normally** thanks to `markdown="1"`.
 `for-course` is UR navy, `for-lab` is azure. Omitting `markdown="1"` leaves the body as literal
 text — kramdown does not parse Markdown inside HTML blocks by default.
 
-## Two Traps That Cost Real Time
+## Three Traps That Cost Real Time
 
 **1. `body_class` in a layout is `layout.body_class`, not `page.body_class`.** `default.html`
 resolves it with a fallback:
@@ -86,8 +97,22 @@ callout comes out as `<p><span class="audience-label">…</span></p>`, so direct
 (`.audience > .audience-label`) miss it. Use descendant selectors for anything inside a
 `markdown="1"` block.
 
+**3. Kramdown joins adjacent lines into a single paragraph.** Two consecutive lines, each
+intended to stand on its own:
+
+```markdown
+**Due:** Friday, September 18, 2026
+**Submit via:** Google Form (link on course website)
+```
+
+These render as one run-on paragraph: "Due: Friday, September 18, 2026 Submit via: Google Form".
+The source looks right, and so does any Markdown preview that treats a newline as a break — it is
+only wrong in the built HTML. Separate them with a blank line (two paragraphs), or end the first
+with an explicit `<br>`. A trailing double-space is also a kramdown hard break, but it is
+invisible in the file and editors that trim trailing whitespace will silently remove it.
+
 The general lesson: **verify Jekyll changes by building and reading the generated HTML**, not by
-reading the source. Both bugs above were invisible in the Markdown and the layout.
+reading the source. All three bugs above were invisible in the Markdown and the layout.
 
 ## Local Preview
 
@@ -125,5 +150,33 @@ grep -c '```' _site/guides/cluster-setup/index.html      # expect 0
 grep -c 'markdown="1"' _site/guides/cluster-setup/index.html  # expect 0
 ```
 
-Also worth running a link check across the whole built site, resolving each local `href` against
-`_site/` and accepting either the file or a directory containing `index.html`.
+Also run a link check across the whole built site. Run it against `_site/`, not the source tree —
+a permalinked page has no source file at its URL, so checking the source reports false breakage:
+
+```python
+import os, re
+from urllib.parse import urljoin, urlparse, unquote
+
+broken = []
+for root, _, files in os.walk('_site'):
+    for name in files:
+        if not name.endswith('.html'):
+            continue
+        page = '/' + os.path.relpath(os.path.join(root, name), '_site')
+        html = open(os.path.join(root, name), encoding='utf-8', errors='ignore').read()
+        for href in re.findall(r'href="([^"]+)"', html) + re.findall(r'src="([^"]+)"', html):
+            if urlparse(href).scheme or href.startswith(('//', '#')):
+                continue
+            target = unquote(urljoin(page, href).split('#')[0].split('?')[0])
+            path = os.path.join('_site', target.lstrip('/'))
+            if os.path.isfile(path) or os.path.isfile(os.path.join(path, 'index.html')):
+                continue
+            broken.append((page, href))
+
+print(len(broken), 'broken local links')
+for item in broken[:20]:
+    print('  ', item)
+```
+
+Accepting either the file or a directory containing `index.html` is what makes clean permalink
+URLs (`project/m1/`) pass.
