@@ -8,6 +8,7 @@ Cross-listed undergrad/grad, Linguistics. Taught in fall semesters.
 ## Meeting
 
 Monday and Wednesday, 10:25–11:40 AM, Lattimore 513. Instructor office: Lattimore 507.
+Office hours are **by appointment** — the standing wording across all current course pages; don't leave it as `TBD`.
 
 ## Grading
 
