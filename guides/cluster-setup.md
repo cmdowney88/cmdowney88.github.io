@@ -503,14 +503,35 @@ rather than trusting this guide:
 ls /software/miniforge3/
 ```
 
-Newest is generally the right choice. The module version is the conda/mamba tooling, not your
-Python or your packages, so a newer one mostly means a better dependency solver and bug fixes —
-there's no "stable branch" to hang back on.
+**Take the newest, and do not reach for an older one.** This is not the usual "newer is nicer"
+advice — some of the older miniforge modulefiles are actively harmful. Check any version before
+you use it:
 
-The real consideration isn't new versus old, it's **consistency**. `conda init` writes this
-module's path into your `.bashrc`, so changing versions later means re-running it, and people
-sharing an environment are better off on the same tooling. Pick one, write it down, and revisit
-occasionally rather than chasing releases.
+```bash
+module show miniforge3/25.11.0-1
+```
+
+A good one does almost nothing — a `conflict` line, a `module-whatis`, and an `activate` alias.
+A bad one contains lines like these:
+
+```text
+prepend-path     PYTHONPATH /software/miniforge3/<version>/lib/python3.10/site-packages
+prepend-path     LD_LIBRARY_PATH /software/miniforge3/<version>/lib
+prepend-path     PATH /software/miniforge3/<version>/bin
+```
+
+Every one of those **prepends**, so that installation's Python, packages and shared libraries
+take precedence over the environment you activate later. Your env is then shadowed: `pip` writes
+to the wrong place, imports resolve to the wrong copy, and compiled libraries load from the wrong
+tree. It fails in ways that look like anything but a module problem — permission errors during
+`pip install`, `GLIBCXX` errors at runtime, packages that are installed but "missing". If
+`module show` prints any `prepend-path` for `PYTHONPATH` or `LD_LIBRARY_PATH`, pick a different
+version.
+
+Beyond that, the choice is about **consistency**. The module version is the conda/mamba tooling,
+not your Python or your packages, so a newer one mostly means a better solver and bug fixes.
+People sharing an environment are better off on the same tooling. Pick one, write it down, and
+revisit occasionally rather than chasing releases.
 
 **Check it worked:**
 
@@ -518,43 +539,15 @@ occasionally rather than chasing releases.
 which conda    # Should show a path to conda
 ```
 
-If you get `conda: command not found`, you may need:
+If you get `conda: command not found`, that is expected with the newer, minimal modulefiles —
+they deliberately don't touch your `PATH`. Use the installation's own activate script instead:
 
 ```bash
 source /software/miniforge3/25.11.0-1/bin/activate
 which conda    # Try again
 ```
 
-### Step 2: Make it Automatic (Add to .bashrc)
-
-You don't want to run `module load` every time you log in. Add it to your `.bashrc`:
-
-```bash
-nano ~/.bashrc
-```
-
-**Add this line at the end:**
-
-```bash
-# Load conda
-module load miniforge3/25.11.0-1
-```
-
-**What is .bashrc?**
-
-- A script that runs every time you start a new shell session
-- Used for customizing your environment (aliases, loading modules, etc.)
-- Lives in your home directory (`~/.bashrc`)
-
-**Activate changes:**
-
-```bash
-source ~/.bashrc
-```
-
-Or log out and back in.
-
-### Step 3: Initialize Conda
+### Step 2: Initialize Conda
 
 First time only, run:
 
@@ -562,7 +555,14 @@ First time only, run:
 conda init --all
 ```
 
-This modifies your `.bashrc` to set up conda.
+This modifies your `.bashrc` to set up conda. It writes a block that calls conda by its **full
+path**, which matters for the next step.
+
+**What is .bashrc?**
+
+- A script that runs every time you start a new shell session
+- Used for customizing your environment (aliases, setting variables, etc.)
+- Lives in your home directory (`~/.bashrc`)
 
 **Important:** after running `conda init --all`, log out and log back in for the changes to take
 effect.
@@ -572,14 +572,34 @@ effect.
 - You should see `(base)` at the start of your command prompt
 - Run `which python` — it should point to conda's Python
 
-CIRC notes one caveat: `conda init` ties your shell to this particular conda module, and other
-modules that bundle their own Python can then interact badly with it. If you start seeing
-mismatched Python versions after loading unrelated modules, this is the likely cause. You can
-soften it with:
+If you'd rather not start every session inside `base`:
 
 ```bash
 conda config --set auto_activate_base False
 ```
+
+### Step 3: Do *Not* Put the Module Load in .bashrc
+
+It is tempting to add `module load miniforge3/...` to your `.bashrc` so conda is always
+available. **Don't.** After Step 2 it is unnecessary, and with some modulefiles it is harmful.
+
+Unnecessary, because the block `conda init` wrote invokes conda by absolute path — it does not
+depend on the module being loaded. That is why the job scripts later in this guide use
+`eval "$(conda shell.bash hook)"` and never `module load`.
+
+Harmful, because a modulefile that prepends `PYTHONPATH` or `LD_LIBRARY_PATH` (see Step 1) then
+does so in **every** shell you open, permanently shadowing whichever environment you activate.
+The combination is especially confusing: `conda activate` reports success, the prompt changes,
+and the environment is still being overridden underneath.
+
+So the module load belongs in the one shell where you run `conda init`, and nowhere else. If you
+followed an older version of this guide and already added it, remove the line:
+
+```bash
+nano ~/.bashrc     # delete the `module load miniforge3/...` line
+```
+
+Leave the `# >>> conda initialize >>>` block alone — that one is doing the real work.
 
 ### Step 4: Configure Conda to Use Scratch
 
@@ -748,6 +768,27 @@ Confirm with `which python`, which should return a path inside your own scratch:
 ```
 </div>
 
+### Check Nothing Is Shadowing Your Environment
+
+Do this once, now that you have an environment to test with. This class of problem is silent —
+`conda activate` reports success either way — so the check is worth more than it looks.
+
+```bash
+conda activate myproject
+python -m pip -V                        # path must be inside your environment
+python -c "import sys; print(sys.path[0])"
+echo "PYTHONPATH=[$PYTHONPATH]"         # should print PYTHONPATH=[]
+```
+
+`python -m pip -V` should print a path under
+`/scratch/username/my-conda/envs/myproject/`. If it prints one under `/software/` instead, your
+environment is being shadowed: revisit Steps 1 and 3, open a fresh shell, and check again.
+Anything non-empty in `PYTHONPATH` is worth tracking down for the same reason.
+
+If you skip this and it is wrong, the symptoms you eventually hit are `pip install` failing with
+permission errors, imports resolving to a different version than the one you installed, or a
+library error partway through a training job.
+
 ## Part 6: Using Conda in Slurm Jobs
 
 When you submit a *batch* job, it starts a fresh shell that doesn't have your conda setup by
@@ -774,7 +815,7 @@ echo "Job ID: $SLURM_JOB_ID"
 echo "Node: $(hostname)"
 echo "Start time: $(date)"
 
-# Activate conda (module already loaded via .bashrc)
+# Activate conda (no module load needed -- the hook is self-sufficient)
 eval "$(conda shell.bash hook)"
 echo "conda initialized"
 conda activate myproject
@@ -794,7 +835,10 @@ echo "End time: $(date)"
 **Key points:**
 
 - `eval "$(conda shell.bash hook)"` initializes conda inside the job
-- No need to `module load` since your `.bashrc` already does this
+- Do **not** `module load` here. The hook needs no module, and a modulefile that prepends
+  `PYTHONPATH` or `LD_LIBRARY_PATH` would shadow your environment inside the job — where it
+  surfaces as a mid-training import or library error rather than anything obviously
+  module-related (see Part 5, "Do *Not* Put the Module Load in .bashrc")
 - You may see older scripts use `source /software/miniforge3/<version>/bin/activate myproject`
   instead. That works too, but it hard-codes the miniforge version, so prefer the hook
 - `conda activate` works normally after the hook
@@ -902,10 +946,11 @@ conda list                        # Packages in current env
 conda env list                    # All environments
 
 # Modules
-module load miniforge3/25.11.0-1   # Load conda
+module load miniforge3/25.11.0-1   # Bootstrap conda (one time, for `conda init`)
+module show miniforge3/25.11.0-1   # What a module changes -- check before using one
 module list                       # What's loaded?
 module avail                      # What's available?
-ls /software/miniforge3/          # Versions of a specific package
+ls /software/miniforge3/          # Which miniforge versions exist
 
 # File editing
 nano file.txt                     # Edit with nano
@@ -937,9 +982,24 @@ nano file.txt                     # Edit with nano
 
 **"conda: command not found"**
 
-- Did you run `module load miniforge3/25.11.0-1`?
-- Did you log out and back in after `conda init`?
-- Try: `source /software/miniforge3/25.11.0-1/bin/activate`
+- Did you log out and back in after `conda init`? The block it writes only takes effect in a new
+  shell
+- If you have not run `conda init` yet, bootstrap it once with
+  `source /software/miniforge3/25.11.0-1/bin/activate`
+- Note that `module load miniforge3/...` does **not** reliably put conda on your `PATH` — the
+  newer modulefiles deliberately set nothing
+
+**`pip install` fails with a permission error, or installs into the wrong place**
+
+- Almost always your environment being shadowed by a module. Check with
+  `python -m pip -V`: the path must be inside your environment, not under `/software/`
+- Check `echo $PYTHONPATH` — it should be empty
+- The usual cause is `module load miniforge3/...` in your `.bashrc`. Remove it; see Part 5,
+  "Do *Not* Put the Module Load in .bashrc"
+
+**Packages are installed but Python can't see them, or sees the wrong version**
+
+- Same cause as above. `python -c "import sys; print(sys.path[0])"` will show what is winning
 
 **"Disk quota exceeded"**
 
