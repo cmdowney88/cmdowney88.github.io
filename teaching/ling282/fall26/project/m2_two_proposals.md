@@ -127,5 +127,5 @@ about language, or about how models represent it? What bigger question does it c
 - If working in a group, all members submit the same document
 
 I'll give written feedback on both proposals. Use that feedback when narrowing to one idea for M3
-(Abstract + Completion Plan, due Friday, Oct 9). The turnaround is short, so if you'd like to talk
+(Abstract + Completion Plan, due Friday, Oct 16). The turnaround is short, so if you'd like to talk
 through the choice rather than wait on written comments, come to office hours.

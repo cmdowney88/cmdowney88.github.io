@@ -74,7 +74,7 @@ hybrid) in M3.
 
 ---
 
-## M3: Abstract + Completion Plan (Due Friday, Oct 9)
+## M3: Abstract + Completion Plan (Due Friday, Oct 16)
 
 ### Abstract
 
