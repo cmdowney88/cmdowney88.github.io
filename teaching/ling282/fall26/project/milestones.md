@@ -76,6 +76,8 @@ hybrid) in M3.
 
 ## M3: Abstract + Completion Plan (Due Friday, Oct 16)
 
+Submit a PDF on Blackboard. See [full requirements](../m3/).
+
 ### Abstract
 
 Narrow down to one project idea and write a formal abstract, including:
@@ -109,6 +111,8 @@ into written feedback, or we can meet to discuss.
 ---
 
 ## M4: Progress Report + Github Repo (Due Friday, Nov 6)
+
+Submit a PDF on Blackboard. See [full requirements](../m4/).
 
 ### Progress Report (PDF)
 
