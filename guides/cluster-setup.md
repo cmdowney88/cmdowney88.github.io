@@ -62,6 +62,31 @@ anything else. This is the most common reason a connection fails outright.
 
 ### Get a BlueHive Account
 
+**Your BlueHive username and password are your UR Active Directory credentials** — the same ones
+you use everywhere else in UR's systems. There is no separate cluster password to remember.
+
+<div class="audience for-course" markdown="1">
+<span class="audience-label">In a course</span>
+
+**Skip the rest of this section, and do not fill out the account registration form.** I request
+temporary accounts for the whole class, so you don't need to request one yourself. A request
+through the form with me as sponsor creates a separate research account, which I pay for
+annually.
+
+Instead, go straight to [Part 1](#part-1-logging-in) and log in with your NetID and password.
+You'll receive an email when your class account is active. If you don't have it yet, that's
+expected. Follow along in class, and do the setup yourself once the account exists.
+</div>
+
+<div class="audience for-lab" markdown="1">
+<span class="audience-label">In the lab</span>
+
+Either of us can request your account. I can request it for you when you join the group, or you
+can fill out the form below yourself — but **check with me before you do**, since an account
+with me as sponsor is billed to the group. Either way, let me know once it exists so I can add
+access to the lab's partition and storage.
+</div>
+
 Request an account through the [CIRC account registration form](https://registration.circ.rochester.edu/account). Set up the VPN first —
 the registration form is behind it too, so this step won't work otherwise.
 
@@ -73,26 +98,8 @@ the registration form is behind it too, so this step won't work otherwise.
 You'll get an automated confirmation email immediately, then a second email about 1-2 business
 days later confirming the account exists.
 
-**Your BlueHive username and password are your UR Active Directory credentials** — the same ones
-you use everywhere else in UR's systems. There is no separate cluster password to remember.
-
 If you already have a BlueHive account, you do **not** need a new one for BlueHive3 — the same
 account works on both.
-
-<div class="audience for-course" markdown="1">
-<span class="audience-label">In a course</span>
-
-Accounts are requisitioned for the class — you'll receive an email when yours is active. If you
-don't have it yet, that's expected. Follow along in class, and do the setup yourself once the
-account exists.
-</div>
-
-<div class="audience for-lab" markdown="1">
-<span class="audience-label">In the lab</span>
-
-Let me know when you join the group and I'll request an account for you, along with access to
-the lab's partition and storage.
-</div>
 
 ## Part 1: Logging In
 
