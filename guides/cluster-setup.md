@@ -299,6 +299,13 @@ reservation for the semester, which you'd request like this:
 
 If the class has a reservation, I'll give you the exact names to fill in — they change every
 semester.
+
+The `reserved` partition is hidden, so jobs submitted to it **don't appear in a plain
+`squeue -u username`** — it will look as though your job vanished. Add `-a` to show them:
+
+```bash
+squeue -a -u username
+```
 </div>
 
 <div class="audience for-lab" markdown="1">
