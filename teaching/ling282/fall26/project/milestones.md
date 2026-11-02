@@ -110,7 +110,7 @@ into written feedback, or we can meet to discuss.
 
 ---
 
-## M4: Progress Report + Github Repo (Due Friday, Nov 6)
+## M4: Progress Report + Github Repo (Due Monday, Nov 9)
 
 Submit a PDF on Blackboard. See [full requirements](../m4/).
 

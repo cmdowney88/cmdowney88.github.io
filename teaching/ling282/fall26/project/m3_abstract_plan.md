@@ -104,7 +104,7 @@ deadlines:
 
 | Date | Milestone |
 |------|-----------|
-| Fri, Nov 6 | M4: Progress report + Github repository |
+| Mon, Nov 9 | M4: Progress report + Github repository |
 | Week of Nov 16 | Code walkthrough (30-minute appointment) |
 | Fri, Dec 4 | M5: Final progress report |
 | Dec 7, 9, and 14 | Presentations |

@@ -5,7 +5,7 @@ subtitle: LING 282/482, Fall 2026
 permalink: /teaching/ling282/fall26/project/m4/
 ---
 
-**Due: Friday, November 6 (submit PDF on Blackboard)**
+**Due: Monday, November 9 (submit PDF on Blackboard)**
 
 This milestone is a structured check-in: where is your project now, how does that compare to your
 M3 plan, and what is the path from here to the finish line? It has two parts: a progress report and
