@@ -82,7 +82,7 @@ Standard sequence:
 | M2 | Two informal proposals |
 | M3 | Abstract + completion plan — commit to one idea |
 | M4 | Progress checkpoint, with GitHub repo |
-| *(appointments)* | 30-minute code walkthrough, between M4 and M5 |
+| *(appointments)* | 20-minute code walkthrough, between M4 and M5 |
 | M5 | Final progress report |
 | — | Presentations, final class sessions |
 | — | Final writeup, finals week |

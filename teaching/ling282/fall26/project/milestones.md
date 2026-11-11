@@ -146,7 +146,7 @@ Your `README.md` should contain:
 
 ## Code Walkthrough (Week of Nov 16)
 
-Book a 30-minute appointment to review your software infrastructure (scripts for data gathering,
+Book a 20-minute appointment to review your software infrastructure (scripts for data gathering,
 cleaning, training, and analysis).
 
 At this stage, your code should be complete or nearly complete, and your attention should shift to

@@ -55,7 +55,7 @@ for all the remaining deadlines:
 
 | Date | Milestone |
 |------|-----------|
-| Week of Nov 16 | Code walkthrough (30-minute appointment) |
+| Week of Nov 16 | Code walkthrough (20-minute appointment) |
 | Fri, Dec 4 | M5: Final progress report |
 | Dec 7, 9, and 14 | Presentations |
 | Dec 18 | Final writeup |
